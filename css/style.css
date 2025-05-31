@@ -356,7 +356,6 @@ menu        sp
     margin-bottom: 0;
   }
 }
-
 /* ===========================
   news
    =========================== */
@@ -396,7 +395,6 @@ menu        sp
     text-align: left; 
     font-size: 1.7rem;
   }
-  
 /* ===========================
   news　　　sp
    =========================== */
@@ -432,7 +430,6 @@ menu        sp
     text-align: left;
   }
 }
-
 /* ===========================
    info
    =========================== */
@@ -515,9 +512,6 @@ border: none;
     border-bottom: 1px solid #000;
     margin: 1.2rem 0 1.2rem;
     padding-bottom: 1.2rem;
-  }
-  .map {
-
   }
   iframe {
 aspect-ratio: auto;
@@ -616,7 +610,6 @@ contact       SP
   input[type="email"] {
     height: 4rem;
   }
-  
 }
 /* ===========================
 footer
