@@ -123,6 +123,7 @@ main
 }
 .main-content__box {
   width: 43%;
+  /* height: 50rem; */
   background-image: url(../img/logo.png);
   background-repeat: no-repeat;
   background-color: #e5a414;
