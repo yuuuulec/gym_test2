@@ -42,13 +42,13 @@ li {
   margin-bottom: 4.7rem;
 }
 @media (max-width: 767px) {
-    .inner {
-      max-width: 100%;
-      padding-inline: 0;
-    }
-    .section__ttl {
-      margin-bottom: 4rem;
-    }
+  .inner {
+    max-width: 100%;
+    padding-inline: 0;
+  }
+  .section__ttl {
+    margin-bottom: 4rem;
+  }
 }
 
 /* ===========================
@@ -146,10 +146,15 @@ main
   border: 0.2rem solid #000;
   inset: 2rem;
 }
+.main-content__box .sp-only {
+  display: none;
+}
 .main-text {
   font-size: 3rem;
   line-height: 1.4;
+  width: 100%;
 }
+
 .top-text {
   margin-top: 8.8rem;
 }
@@ -157,8 +162,8 @@ main
   display: none;
 }
 .middle-text {
-margin-top: 4.3rem;
-margin-left: 2.4rem;
+  margin-top: 4.3rem;
+  margin-left: 2.4rem;
 }
 .bottom-text {
   margin: 1.6rem 0 9.6rem 2.3rem;
@@ -195,8 +200,13 @@ margin-left: 2.4rem;
 /* ===========================
  header main　　　　　SP
    =========================== */
+   @media (max-width: 823px) {
+    .main-content__box {
+padding-top: 3rem;
+   }
+  }
 @media (max-width: 767px) {
- .header__inner {
+  .header__inner {
     padding: 0 2.2rem;
   }
   .header__logo {
@@ -204,7 +214,7 @@ margin-left: 2.4rem;
   }
   .nav {
     display: none;
-  } 
+  }
   #main {
     flex-direction: column-reverse;
     position: relative;
@@ -223,46 +233,48 @@ margin-left: 2.4rem;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* white-space: normal; */
     background-position: center right;
     position: absolute;
-    z-index:1;
+    z-index: 1;
     bottom: -5rem;
     left: 0;
   }
   .main-content__box::after {
     border: 0.1rem solid #000;
-    inset: 1.3rem;
+    top:1rem;
+    right: 1.2rem;
+    left: 1.2rem;
+    bottom: 1.8rem;
   }
   .main-text {
     font-size: 2rem;
-    line-height: 2.25;
   }
   .top-text {
-    margin-top: 5rem;
-    background-color: aqua;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
   }
   .sp-space {
     display: inline-block;
     margin-right: 1.4rem;
   }
   .middle-text {
-    margin-top: 1rem;
     padding-left: 0;
     font-size: 2rem;
-    line-height: 1.2;
-    background-color: blueviolet;
+    line-height: 1;
+    margin: 0;
+    margin-top: 1rem;
   }
   .bottom-text {
     margin-top: 1rem;
-    line-height: 1.7;
-    background-color: chartreuse;
+    line-height: 1;
+    margin: 0;
   }
   .back-black {
     display: inline-block;
     font-size: 3.5rem;
-    line-height: 1.7;
-    padding: 0 1rem 0.2rem 0;
+    line-height: 1;
+    padding: 1rem 0.8rem 1rem;
     margin: 0;
   }
   .main__img {
@@ -273,12 +285,12 @@ margin-left: 2.4rem;
     object-position: center center;
   }
   .main__img img {
-width: 100%;
-height: auto;
-display: block;
-object-fit: cover;
-display: block;
-}
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    display: block;
+  }
 }
 
 /*--------------------------
@@ -310,10 +322,14 @@ greeting
 /* ===========================
 greeting           SP
    =========================== */
+   @media (max-width: 847px) {
+    .greeting {
+padding: 7rem 2rem
+   }
+  }
 @media (max-width: 767px) {
   .greeting {
     padding: 0 2rem;
-    /* padding: 0 2rem 5rem; */
     margin: 0;
   }
   .greeting__top {
@@ -396,6 +412,21 @@ reason
 /* ===========================
 reason            SP
    =========================== */
+   @media (max-width: 1011px) {
+    #reason {
+      padding: 6rem 2rem 1rem;
+    }
+    .reason__ttl {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    .reason__img {
+      width: 40%;
+    }
+    .reason__content {
+      width: 55%;
+    }
+  }
 @media (max-width: 767px) {
   #reason {
     padding: 5rem 2rem 0;
@@ -419,12 +450,13 @@ reason            SP
   }
   .reason__item {
     flex-direction: column-reverse;
-    margin-bottom: 2.2rem 
+    margin-bottom: 2.2rem;
   }
   .reason__content {
     width: 100%;
   }
   .reason__desc {
+    text-align: center;
     text-align: left;
     margin-bottom: 2rem;
     font-size: 1.6rem;
@@ -432,7 +464,7 @@ reason            SP
   .reason__item:nth-child(even) {
     flex-direction: column-reverse;
   }
-  .reason__item:nth-of-type(3)  {
+  .reason__item:nth-of-type(3) {
     padding-bottom: 3rem;
   }
   .reason__item:nth-of-type(3) .reason__ttl {
@@ -548,17 +580,22 @@ time {
 /* ===========================
   news　　　sp
    =========================== */
+   @media (max-width: 997px) {
+    .news__item {
+      height: 10rem;
+    }
+   }
 @media (max-width: 767px) {
   .news__section {
-    padding: 6rem 2rem 4rem;
+    padding: 5.8rem 2rem 4.8rem;
   }
   .news__section .section__ttl {
-    margin-bottom: 3.2rem;
+    margin-bottom: 3.4rem;
   }
   .news__item {
     font-size: 2rem;
     height: auto;
-    margin-left: 1rem;
+    padding-left: 1rem;
   }
   .news__ttl {
     margin-right: 0;
@@ -574,7 +611,8 @@ time {
   time {
     width: 100%;
     font-size: 1.7rem;
-    margin-top: 2.6rem;
+    margin-top: 2.4rem;
+    margin-left: 0;
   }
   .news__desc {
     font-size: 1.6rem;
@@ -650,7 +688,7 @@ time {
    =========================== */
 @media (max-width: 767px) {
   #info {
-    padding: 5rem 2rem 5rem;
+    padding: 5.8rem 2rem 4.4rem;
     margin: 0;
   }
   .info {
@@ -659,13 +697,17 @@ time {
   }
   .info__inner {
     width: 100%;
-    margin-top: 3rem;
+    margin-top: -3rem;
+    margin-left: 0;
   }
   .news__item {
     font-size: 1.8rem;
   }
   .company-name {
     font-size: 2rem;
+  }
+  .company-address {
+    margin-bottom: 2rem;
   }
   .company-tel span {
     font-size: 2.5rem;
@@ -674,20 +716,25 @@ time {
     margin-bottom: 0.7rem;
   }
   .company-email {
-    padding-bottom: 1.4rem;
+    padding-bottom: 1.6rem;
   }
   .hours {
     margin-bottom: 2rem;
   }
   .holiday {
     border-bottom: 1px solid #000;
-    margin: 1.2rem 0 1.2rem;
+    margin: -1.8rem 0 1.2rem;
     padding-bottom: 1.2rem;
+  }
+  .business__hours {
+    margin-left: 0rem;
+    margin-top: 0.2rem;
+    font-size: 1.6rem;
   }
   .map {
     width: 100%;
-    height: auto;    
-    aspect-ratio: 4 / 3; 
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
   .map iframe {
     width: 100%;
@@ -762,11 +809,16 @@ contact       SP
    =========================== */
 @media (max-width: 767px) {
   #contact {
-    padding: 5rem 2rem;
+    padding: 5.2rem 2rem 5rem;
+  }
+  .contact__inner {
+    margin-top: 3rem;
+    line-height: 1.8;
   }
   .contact__intro {
     font-size: 1.6rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.8rem;
+    text-align: left;
   }
   .form-group {
     font-size: 1.8rem;
@@ -784,7 +836,9 @@ contact       SP
   }
   .submit-btn {
     width: 100%;
-    padding: 0.7rem;
+    padding: 0.8rem;
+    font-size: 2rem;
+    margin-top: 1rem;
   }
   textarea {
     width: 100%;
@@ -793,7 +847,8 @@ contact       SP
   }
   input[type="text"],
   input[type="email"] {
-    height: 4rem;
+    height: 5rem;
+    margin-bottom: 1.2rem;
   }
 }
 /* ===========================
@@ -810,29 +865,30 @@ footer
   text-align: center;
 }
 .footer__nav {
-  border-bottom: 0.8px solid black;
-  padding-bottom: 1.8rem;
-  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.4rem;
   max-width: 73.7rem;
   width: 100%;
   margin-inline: auto;
 }
 .footer__navlist {
+  border-bottom: 0.8px solid black;
   display: flex;
   column-gap: 1.4rem;
-  margin-left: 2.5rem;
+  padding-left: 2.5rem;
+  padding-bottom: 2rem;
   flex-wrap: wrap;
 }
 .footer__navlist a {
   padding: 0.8rem 0;
 }
 .copyright {
-  margin: 2.8rem 0 0.8rem;
+  margin: .8rem 0 0.8rem;
 }
 .sns-icons {
   text-align: center;
   gap: 0.1rem;
-  margin-inline: auto;  
+  margin-inline: auto;
 }
 .sns-icons a {
   display: inline-flex;
@@ -861,7 +917,15 @@ footer          sp
    =========================== */
 @media (max-width: 767px) {
   #footer {
-    padding: 5rem 2rem;
+    padding: 5rem 0.2rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .footer__nav {
+    margin-top: 0.4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.2rem;
+    line-height: 1.7;
     font-size: 1.8rem;
     gap: 1.5rem;
   }
@@ -870,17 +934,19 @@ footer          sp
     padding-bottom: 2rem;
   }
   .footer__navlist a {
-    padding-top: 0.8rem;
+    padding-top: 1rem;
     width: 2.2rem;
   }
   .copyright {
-    margin: 2rem;
+    margin: 2.6rem;
   }
   .sns-icons {
     text-align: center;
+    font-size: 1.6rem;
+    gap: 2rem;
   }
   .sns-icons a {
-    margin-right: 2rem;
+    margin-right: 0.2rem;
     padding: 1rem 0.5rem;
   }
 }
