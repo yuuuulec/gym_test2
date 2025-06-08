@@ -916,9 +916,9 @@ footer
   justify-content: center;
   padding: 2rem 0;
 }
-.footer__nav-item a{
-color: #000;
-transition: color 0.7s ease;
+.footer__nav-item a {
+  color: #000;
+  transition: color 0.7s ease;
 }
 .footer__nav-item a:hover {
   color: #fbedd3;
@@ -947,7 +947,6 @@ transition: color 0.7s ease;
 }
 .sns-icons a:hover {
   color: #fbedd3;
-
 }
 .sns-icons i {
   font-size: 2.4rem;
@@ -964,52 +963,64 @@ footer          sp
    =========================== */
 @media (max-width: 767px) {
   #footer {
-    padding: 5rem 0;
+    padding: 3.6rem 0 5rem;
     font-size: 1.6rem;
     margin-bottom: 1rem;
+    background-size: 21rem;
+    background-position: calc(100% - 1.7rem) center;
   }
   .footer__nav {
     margin-top: 0.4rem;
     margin-bottom: 2rem;
+    padding: 0;
     padding-bottom: 0.2rem;
-    line-height: 1.7;
+    line-height: 1;
     font-size: 1.8rem;
-    gap: 1.5rem;
   }
   .footer__navlist {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 2rem;
+    row-gap: 1.4rem;
+    column-gap: 1.4rem;
+    justify-content: center;
+    padding-bottom: 0;
     position: relative;
     border: none;
+    padding-left: 0;
   }
   .footer__navlist::after {
     content: "";
     position: absolute;
-    bottom: -0.4rem;
+    bottom: -2.4rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 33.5rem;
+    width: 90%;
     height: 1px;
     background-color: black;
   }
-  .footer__nav-item:nth-child(5) {
-    padding-left: 2rem;
-  }
-  .footer__navlist a {
-    padding: 1rem 0.8rem;
-    width: 2.2rem;
-  }
   .copyright {
-    margin: 2.6rem;
+    padding-top: 1rem;
+  }
+  .footer__nav-item a {
+    padding: 0.2rem 0 0.2rem;
+  }
+  /* .footer__nav-item:nth-child(5) {
+    padding-left: 2rem;
+  } */
+  /* .footer__navlist a {
+    padding: 0.1rem 1rem;
+  }  */
+  .copyright {
+    margin: 3.8rem 0 2.1rem;
   }
   .sns-icons {
     text-align: center;
-    font-size: 1.6rem;
-    gap: 2rem;
+    font-size: 1.4rem;
+    gap: 1rem;
   }
   .sns-icons a {
-    margin-right: 0.2rem;
+    margin-right: 0.1rem;
     padding: 1rem 0.5rem;
   }
 }
