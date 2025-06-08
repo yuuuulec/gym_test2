@@ -200,11 +200,12 @@ main
 /* ===========================
  header main　　　　　SP
    =========================== */
-   @media (max-width: 823px) {
-    .main-content__box {
-padding-top: 3rem;
-   }
+@media (max-width: 823px) {
+  .main-content__box {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
   }
+}
 @media (max-width: 767px) {
   .header__inner {
     padding: 0 2.2rem;
@@ -238,21 +239,26 @@ padding-top: 3rem;
     z-index: 1;
     bottom: -5rem;
     left: 0;
+    padding-top: 0;
   }
   .main-content__box::after {
     border: 0.1rem solid #000;
-    top:1rem;
+    top: 1.2rem;
     right: 1.2rem;
     left: 1.2rem;
-    bottom: 1.8rem;
+    bottom: 1.3rem;
+  }
+  .main-content__box .sp-only {
+display: inline;
   }
   .main-text {
     font-size: 2rem;
   }
   .top-text {
+    text-align: left;
+    padding-left: 4.2rem;
     line-height: 1;
     margin: 0;
-    padding: 0;
   }
   .sp-space {
     display: inline-block;
@@ -322,11 +328,11 @@ greeting
 /* ===========================
 greeting           SP
    =========================== */
-   @media (max-width: 847px) {
-    .greeting {
-padding: 7rem 2rem
-   }
+@media (max-width: 1011px) {
+  .greeting {
+    padding: 7rem 2rem;
   }
+}
 @media (max-width: 767px) {
   .greeting {
     padding: 0 2rem;
@@ -412,21 +418,21 @@ reason
 /* ===========================
 reason            SP
    =========================== */
-   @media (max-width: 1011px) {
-    #reason {
-      padding: 6rem 2rem 1rem;
-    }
-    .reason__ttl {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-    .reason__img {
-      width: 40%;
-    }
-    .reason__content {
-      width: 55%;
-    }
+@media (max-width: 1011px) {
+  #reason {
+    padding: 6rem 2rem 1rem;
   }
+  .reason__ttl {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .reason__img {
+    width: 40%;
+  }
+  .reason__content {
+    width: 55%;
+  }
+}
 @media (max-width: 767px) {
   #reason {
     padding: 5rem 2rem 0;
@@ -454,6 +460,7 @@ reason            SP
   }
   .reason__content {
     width: 100%;
+    text-align: center;
   }
   .reason__desc {
     text-align: center;
@@ -510,6 +517,11 @@ menu
 /* ===========================
 menu        sp
    =========================== */
+@media (max-width: 1011px) {
+  .menu {
+    padding: 7rem 2rem 6rem;
+  }
+}
 @media (max-width: 767px) {
   .menu {
     padding: 1.5rem 2rem 0.4rem;
@@ -580,11 +592,14 @@ time {
 /* ===========================
   news　　　sp
    =========================== */
-   @media (max-width: 997px) {
-    .news__item {
-      height: 10rem;
-    }
-   }
+@media (max-width: 1011px) {
+  .news__section {
+    padding: 6rem 2rem;
+  }
+  .news__item {
+    height: 10rem;
+  }
+}
 @media (max-width: 767px) {
   .news__section {
     padding: 5.8rem 2rem 4.8rem;
@@ -646,6 +661,9 @@ time {
   line-height: 1.32;
   margin-bottom: 2rem;
 }
+.company-address .sp-only {
+  display: none;
+}
 .map {
   width: 44rem;
   height: 30rem;
@@ -686,6 +704,12 @@ time {
 /* ===========================
    info    sp
    =========================== */
+@media (max-width: 1011px) {
+  #info {
+    padding: 7rem 2rem 3rem;
+  }
+}
+
 @media (max-width: 767px) {
   #info {
     padding: 5.8rem 2rem 4.4rem;
@@ -699,6 +723,9 @@ time {
     width: 100%;
     margin-top: -3rem;
     margin-left: 0;
+  }
+  .company-address .sp-only { 
+    display: inline;
   }
   .news__item {
     font-size: 1.8rem;
@@ -807,6 +834,11 @@ input[type="email"] {
 /* ===========================
 contact       SP
    =========================== */
+@media (max-width: 1011px) {
+  #contact {
+    padding: 7rem 2rem 6rem;
+  }
+}
 @media (max-width: 767px) {
   #contact {
     padding: 5.2rem 2rem 5rem;
@@ -883,7 +915,7 @@ footer
   padding: 0.8rem 0;
 }
 .copyright {
-  margin: .8rem 0 0.8rem;
+  margin: 0.8rem 0 0.8rem;
 }
 .sns-icons {
   text-align: center;
@@ -903,10 +935,6 @@ footer
   font-size: 2.3rem;
 }
 .circle-icon {
-  /* display: inline-flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* height: 5.6rem; */
   border-radius: 50%;
   color: #e5a414;
   background-color: black;
@@ -917,7 +945,7 @@ footer          sp
    =========================== */
 @media (max-width: 767px) {
   #footer {
-    padding: 5rem 0.2rem;
+    padding: 5rem 0;
     font-size: 1.6rem;
     margin-bottom: 1rem;
   }
@@ -930,8 +958,24 @@ footer          sp
     gap: 1.5rem;
   }
   .footer__navlist {
+    display: flex;
     flex-wrap: wrap;
     padding-bottom: 2rem;
+    position: relative;
+    border: none;
+  }
+  .footer__navlist::after {
+    content: '';
+    position: absolute;
+    bottom: -0.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33.5rem; 
+    height: 1px;
+    background-color: black;
+  }
+  .footer__nav-item:nth-child(5) {
+    padding-left: 2rem;
   }
   .footer__navlist a {
     padding-top: 1rem;
