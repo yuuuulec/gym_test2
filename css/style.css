@@ -115,7 +115,6 @@ header
 }
 .nav__item span:hover::after {
   width: 100%;
-  color: ;
 }
 .nav__list:last-child {
   margin-right: 0;
