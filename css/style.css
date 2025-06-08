@@ -478,9 +478,6 @@ reason            SP
     margin-top: 2.7rem;
     margin-bottom: 1.5rem;
   }
-  .reason__item:nth-of-type(3) {
-    margin: ;
-  }
   .reason__item--inner {
     width: 100%;
   }
@@ -506,7 +503,6 @@ menu
 }
 .menu__ttl {
   font-size: 2rem;
-  line-height: calc(2rem / 2.5rem);
   text-align: center;
   margin: 1rem 0 0.5rem;
 }
@@ -533,14 +529,12 @@ menu        sp
     width: 100%;
   }
   .menu__ttl {
-    line-height: calc(2rem / 3rem);
     text-align: center;
     margin: 1rem 1rem;
   }
   .menu__desc {
     font-size: 1.6rem;
     margin-bottom: 4.7rem;
-    line-height: calc(3rem / 1.6rem);
   }
   .menu__item:last-of-type {
     margin-bottom: 0;
