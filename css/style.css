@@ -208,6 +208,12 @@ main
     padding-top: 5.5rem;
     padding-bottom: 4rem;
   }
+  .main-content__box::after {
+    position: absolute;
+    content: "";
+    border: 0.2rem solid #000;
+    inset: 1rem;
+  }
 }
 @media (max-width: 767px) {
   .header__inner {
@@ -223,9 +229,6 @@ main
     height: auto;
     position: relative;
     flex-direction: column-reverse;
-    gap:0;
-    margin: 0;
-    padding:0;
   }
   #main .pc-only {
     display: none;
@@ -234,16 +237,17 @@ main
     font-size: 2rem;
     width: 100%;
     height: 18.8rem;
-    gap:0;
-    margin: 0;
-    padding:0;
+    position: absolute;
+    bottom: -9.2rem;
+    left: 0;
+    z-index: 10;
   }
   .main-content__box::after {
     border: 0.1rem solid #000;
     top: 1.3rem;
     right: 1.2rem;
     left: 1.2rem;
-    bottom: 1.3rem;
+    bottom: 1.4rem;
   }
   .main-content__box .sp-only {
     display: inline;
@@ -290,9 +294,7 @@ main
     width: 100%;
    height: auto; 
     line-height: 0;
-    gap:0;
-    margin: 0;
-    padding:0;
+    position: relative;
   }
   .main__img img {
     width: 100%;
@@ -334,18 +336,19 @@ greeting           SP
    =========================== */
 @media (max-width: 1011px) {
   .greeting {
-    padding: 6rem 2rem;
+    padding: 4.3rem 2rem 5rem;
   }
 }
 @media (max-width: 767px) {
   .greeting {
-    padding: -8rem 2rem 0;
+    padding: -8rem 2rem;
     margin: 0;
   }
   .greeting__top {
     font-size: 2.3rem;
-    line-height: 1.522;
-    margin: 5rem 0 2rem;
+    line-height: 1.5;
+    margin-top: 5rem;
+    margin-bottom: 1.8rem;
     padding-top: 5rem;
     font-weight: bold;
     text-align: center;
@@ -439,7 +442,7 @@ reason            SP
 }
 @media (max-width: 767px) {
   #reason {
-    padding: 5rem 2rem 0;
+    padding: 5.4rem 2rem 0;
     width: 100%;
   }
   .triangle {
@@ -469,17 +472,17 @@ reason            SP
   .reason__desc {
     text-align: center;
     text-align: left;
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
     font-size: 1.6rem;
   }
   .reason__item:nth-child(even) {
     flex-direction: column-reverse;
   }
   .reason__item:nth-of-type(3) {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
   .reason__item:nth-of-type(3) .reason__ttl {
-    margin-top: 2.7rem;
+    margin-top: 2rem;
     margin-bottom: 1.5rem;
   }
   .reason__item--inner {
@@ -524,7 +527,7 @@ menu        sp
 }
 @media (max-width: 767px) {
   .menu {
-    padding: 1.5rem 2rem 0.4rem;
+    padding: 2.4rem 2rem 0.4rem;
   }
   .menu__list {
     flex-direction: column;
@@ -710,7 +713,7 @@ time {
 
 @media (max-width: 767px) {
   #info {
-    padding: 5.8rem 2rem 4.4rem;
+    padding: 5.8rem 2rem 3.8rem;
     margin: 0;
   }
   .info {
@@ -841,7 +844,7 @@ contact       SP
 }
 @media (max-width: 767px) {
   #contact {
-    padding: 5.2rem 2rem 5rem;
+    padding: 5.5rem 2rem 5rem;
   }
   .contact__inner {
     margin-top: 3rem;
@@ -996,7 +999,7 @@ footer          sp
   .footer__navlist::after {
     content: "";
     position: absolute;
-    bottom: -2.1rem;
+    bottom: -2.4rem;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -1009,12 +1012,6 @@ footer          sp
   .footer__nav-item a {
     padding: 0.2rem 0 0.2rem;
   }
-  /* .footer__nav-item:nth-child(5) {
-    padding-left: 2rem;
-  } */
-  /* .footer__navlist a {
-    padding: 0.1rem 1rem;
-  }  */
   .copyright {
     margin: 3.5rem 0 2.1rem;
   }
