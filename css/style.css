@@ -203,7 +203,6 @@ main
 /* ===========================
  header main　　　　　SP
    ========================*/
-
    @media (max-width: 767px) {
     .header__inner {
       padding: 0 2.2rem;
@@ -295,6 +294,14 @@ main
       display: block;
     }
   }
+  @media (max-width: 840px) {
+    .main-content__box::after {
+      position: absolute;
+      content: "";
+      border: 0.2rem solid #000;
+      inset: 1rem;
+    }
+   }
 /*--------------------------
 greeting
 ------------------------------------------*/
@@ -417,7 +424,7 @@ reason            SP
    =========================== */
 @media (max-width: 1011px) {
   #reason {
-    padding: -5rem 2rem 1rem;
+    padding: 5rem 2rem 1rem;
   }
   .reason__ttl {
     margin-top: 1rem;
@@ -430,6 +437,7 @@ reason            SP
     width: 55%;
   }
 }
+
 @media (max-width: 767px) {
   #reason {
     padding: 5.4rem 2rem 0;
