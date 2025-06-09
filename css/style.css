@@ -139,18 +139,18 @@ main
   font-weight: bold;
   position: relative;
   flex-shrink: 0;
-}
-.main__logo {
-  position: absolute;
-  right: 0;
-  bottom: -1rem;
-  display: block;
+  background-image: url(../img/logo_pc.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
 .main-content__box::after {
   position: absolute;
   content: "";
   border: 0.2rem solid #000;
-  inset: 2rem;
+  top: 2rem;
+  left: 2rem;
+  right: 1.9rem;
+  bottom: 2rem;
 }
 .main-content__box .sp-only {
   display: none;
@@ -203,108 +203,98 @@ main
 /* ===========================
  header main　　　　　SP
    ========================*/
-@media (max-width: 823px) {
-  .main-content__box {
-    padding-top: 5.5rem;
-    padding-bottom: 4rem;
-  }
-  .main-content__box::after {
-    position: absolute;
-    content: "";
-    border: 0.2rem solid #000;
-    inset: 1rem;
-  }
-}
-@media (max-width: 767px) {
-  .header__inner {
-    padding: 0 2.2rem;
-  }
-  .header__logo {
-    padding: 0;
-  }
-  .nav {
-    display: none;
-  }
-  #main {
-    height: auto;
-    position: relative;
-    flex-direction: column-reverse;
-  }
-  #main .pc-only {
-    display: none;
-  }
-  .main-content__box {
-    font-size: 2rem;
-    width: 100%;
-    height: 18.8rem;
-    position: absolute;
-    bottom: -9.2rem;
-    left: 0;
-    z-index: 10;
-  }
-  .main-content__box::after {
-    border: 0.1rem solid #000;
-    top: 1.3rem;
-    right: 1.2rem;
-    left: 1.2rem;
-    bottom: 1.4rem;
-  }
-  .main-content__box .sp-only {
-    display: inline;
-  }
-  .main-text {
-    font-size: 2rem;
-  }
-  .top-text {
-    position: relative;
-    top: -5.2rem;
-    line-height: 1;
-  }
-  .sp-space {
-    display: inline-block;
-    margin-right: 1.4rem;
-  }
-  .middle-text {
-    position: relative;
-    top:-5.5rem;
-    font-size: 2rem;
-    line-height: 1;
-    margin: 0;
-    margin-top: 1.4rem;
-  }
-  .bottom-text {
-    position: relative;
-    left: 0;
-    top: -5.3rem;
-    line-height: 1;
-    margin: 0;
-    margin-top: 0.5rem;
-  }
-  .back-black {
-    display: inline-block;
-    font-size: 3.5rem;
-    line-height: 1;
-    padding: 1rem 0.8rem 1rem;
-    margin: 0;
-  }
-  .main__logo {
-    bottom: -0.5rem;
-  }
-  .main__img {
-    width: 100%;
-   height: auto; 
-    line-height: 0;
-    position: relative;
-  }
-  .main__img img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    display: block;
-  }
-}
 
+   @media (max-width: 767px) {
+    .header__inner {
+      padding: 0 2.2rem;
+    }
+    .header__logo {
+      padding: 0;
+    }
+    .nav {
+      display: none;
+    }
+    #main {
+      height: auto;
+      position: relative;
+      flex-direction: column-reverse;
+    }
+    #main .pc-only {
+      display: none;
+    }
+    .main-content__box {
+      font-size: 2rem;
+      width: 100%;
+      height: 18.8rem;
+      position: absolute;
+      bottom: -9.2rem;
+      left: 0;
+      z-index: 10;
+      background-image: url(../img/logo_sp.svg);
+    }
+    .main-content__box::after {
+      border: 0.1rem solid #000;
+      top: 1.2rem;
+      right: 1.2rem;
+      left: 1.2rem;
+      bottom: 1.4rem;
+    }
+    .main-content__box .sp-only {
+      display: inline;
+    }
+    .main-text {
+      font-size: 2rem;
+    }
+    .top-text {
+      position: relative;
+      top: -4.2rem;
+      line-height: 1;
+    }
+    .sp-space {
+      display: inline-block;
+      margin-right: 1.4rem;
+    }
+    .middle-text {
+      position: relative;
+      top:-4.5rem;
+      font-size: 2rem;
+      line-height: 1;
+      margin: 0;
+      margin-top: 1.4rem;
+    }
+    .bottom-text {
+      position: relative;
+      left: 0;
+      top: -4.4rem;
+      line-height: 1;
+      margin: 0;
+      margin-top: 0.5rem;
+    }
+    .back-black {
+      display: inline-block;
+      font-size: 3.5rem;
+      line-height: 1;
+      padding: 1rem 0.8rem 1rem;
+      margin: 0;
+    }
+    .main__logo {
+      width: calc(100 / 600 * 100vw);
+      bottom: -0.5rem;
+    }
+    .main__img {
+      width: 100%;
+     height: auto; 
+      line-height: 0;
+      position: relative;
+    }
+    .main__img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      display: block;
+    }
+  }
 /*--------------------------
 greeting
 ------------------------------------------*/
@@ -341,7 +331,7 @@ greeting           SP
 }
 @media (max-width: 767px) {
   .greeting {
-    padding: -8rem 2rem;
+    padding: 4.4rem 2rem 0.1rem;
     margin: 0;
   }
   .greeting__top {
@@ -392,7 +382,7 @@ reason
   display: inline-block;
   margin-top: 4.9rem;
   margin-bottom: 1.9rem;
-  background: linear-gradient(transparent 63%, #e5a414 83%);
+  background: linear-gradient(transparent 75%, #e5a414 15%);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   flex-wrap: wrap;
@@ -427,7 +417,7 @@ reason            SP
    =========================== */
 @media (max-width: 1011px) {
   #reason {
-    padding: 6rem 2rem 1rem;
+    padding: -5rem 2rem 1rem;
   }
   .reason__ttl {
     margin-top: 1rem;
@@ -603,10 +593,10 @@ time {
 }
 @media (max-width: 767px) {
   .news__section {
-    padding: 5.8rem 2rem 4.8rem;
+    padding: 5.6rem 2rem 4.8rem;
   }
   .news__section .section__ttl {
-    margin-bottom: 3.4rem;
+    margin-bottom: 3.3rem;
   }
   .news__item {
     font-size: 2rem;
@@ -615,7 +605,7 @@ time {
   }
   .news__ttl {
     margin-right: 0;
-    margin: 0.2rem 0 0.4rem;
+    margin: 0.2rem 0 0.5rem;
     width: 100%;
   }
   .news__link {
@@ -632,7 +622,7 @@ time {
   }
   .news__desc {
     font-size: 1.6rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
     flex-wrap: wrap;
     text-align: left;
   }
@@ -660,7 +650,7 @@ time {
 .company-name {
   font-size: 2.5rem;
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
 }
 .company-address .sp-only {
   display: none;
@@ -676,17 +666,18 @@ time {
   display: block;
 }
 .company-address {
-  margin-bottom: 1.4rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.3rem;
 }
 .company-tel span {
   color: #e5a414;
   font-size: 2.5rem;
 }
 .company-tel {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.9rem;
 }
 .company-email {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   padding-bottom: 2.6rem;
   border-bottom: 1px solid #000;
 }
@@ -713,7 +704,7 @@ time {
 
 @media (max-width: 767px) {
   #info {
-    padding: 5.8rem 2rem 3.8rem;
+    padding: 5.8rem 2rem 2rem;
     margin: 0;
   }
   .info {
@@ -778,15 +769,15 @@ contact
 #contact {
   background-color: #fcf6e7;
   position: relative;
-  padding: 7rem 10rem 6rem;
+  padding: 6.9rem 10rem 6rem;
 }
 #contact .section__ttl {
-  margin-bottom: 2.3rem;
+  margin-bottom: 2.5rem;
 }
 .contact__intro {
   text-align: center;
   font-size: 1.7rem;
-  margin-bottom: 3.9rem;
+  margin-bottom: 4rem;
 }
 .form-group {
   font-size: 2rem;
@@ -802,9 +793,9 @@ textarea {
 }
 label {
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   font-weight: bold;
-  padding-top: 1.4rem;
+  padding-top: 1rem;
 }
 .submit-btn {
   font-size: 2.5rem;
