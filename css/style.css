@@ -14,7 +14,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-family: "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN",
+    Meiryo, sans-serif;
   font-size: 1.8rem;
   line-height: 1.5;
   color: #000000;
@@ -26,12 +27,19 @@ img {
   height: auto;
   box-sizing: border-box;
 }
+section {
+  scroll-margin-top: 5rem; 
+}
+
 li {
   list-style: none;
 }
 .inner {
   max-width: 880px;
   margin-inline: auto;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  width: 100%;
 }
 .section__ttl {
   font-size: 2.5rem;
@@ -43,8 +51,9 @@ li {
 }
 @media (max-width: 767px) {
   .inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
     max-width: 100%;
-    padding-inline: 0;
   }
   .section__ttl {
     margin-bottom: 4rem;
@@ -65,6 +74,8 @@ header
   align-items: center;
   padding: 0.1rem 6rem;
   margin-inline: auto;
+  max-width: 108rem;
+    height: 4.9rem;
 }
 .header__logo {
   display: flex;
@@ -76,9 +87,7 @@ header
 }
 .header__logo a {
   display: block;
-  padding-top: 0.6rem;
-  padding-right: 0.4rem;
-  height: 5rem;
+  padding: 0.5rem 0.2rem 0.2rem;
 }
 .logo img {
   width: 2.4rem;
@@ -112,7 +121,7 @@ header
   transition: width 0.7s ease;
   background-color: #e4a415;
 }
-.nav__item span:hover::after {
+.nav__item a:hover span::after {
   width: 100%;
 }
 .nav__list:last-child {
@@ -156,7 +165,7 @@ main
   display: none;
 }
 .main-text {
-  font-size: 3rem;
+  font-size: 2.78vw;
   line-height: 1.4;
 }
 .top-text {
@@ -177,14 +186,24 @@ main
   font-style: italic;
 }
 .dots {
-  -webkit-text-emphasis: filled dot;
-  text-emphasis: filled dot;
+  position: relative;
+  display: inline-block;
+}
+.dots::before {
+  content: "⚫︎⚫︎⚫︎";
+  position: absolute;
+  top: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6rem;
+  letter-spacing: 1.4rem;
+  line-height: 1;
 }
 .back-black {
   display: inline-block;
   background-color: #000000;
   color: #ffff;
-  font-size: 5rem;
+  font-size: 4.6vw;
   line-height: 1.3;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -203,110 +222,102 @@ main
 /* ===========================
  header main　　　　　SP
    ========================*/
-   @media (max-width: 767px) {
-    .header__inner {
-      padding: 0 2.2rem;
-    }
-    .header__logo {
-      padding: 0;
-    }
-    .nav {
-      display: none;
-    }
-    #main {
-      height: auto;
-      position: relative;
-      flex-direction: column-reverse;
-    }
-    #main .pc-only {
-      display: none;
-    }
-    .main-content__box {
-      font-size: 2rem;
-      width: 100%;
-      height: 18.8rem;
-      position: absolute;
-      bottom: -9.2rem;
-      left: 0;
-      z-index: 10;
-      background-image: url(../img/logo_sp.svg);
-    }
-    .main-content__box::after {
-      border: 0.1rem solid #000;
-      top: 1.2rem;
-      right: 1.2rem;
-      left: 1.2rem;
-      bottom: 1.4rem;
-    }
-    .main-content__box .sp-only {
-      display: inline;
-    }
-    .main-text {
-      font-size: 2rem;
-    }
-    .top-text {
-      position: relative;
-      top: -4.2rem;
-      line-height: 1;
-    }
-    .sp-space {
-      display: inline-block;
-      margin-right: 1.4rem;
-    }
-    .middle-text {
-      position: relative;
-      top:-4.5rem;
-      font-size: 2rem;
-      line-height: 1;
-      margin: 0;
-      margin-top: 1.4rem;
-    }
-    .bottom-text {
-      position: relative;
-      left: 0;
-      top: -4.4rem;
-      line-height: 1;
-      margin: 0;
-      margin-top: 0.5rem;
-    }
-    .back-black {
-      display: inline-block;
-      font-size: 3.5rem;
-      line-height: 1;
-      padding: 1rem 0.8rem 1rem;
-      margin: 0;
-    }
-    .main__logo {
-      width: calc(100 / 600 * 100vw);
-      bottom: -0.5rem;
-    }
-    .main__img {
-      width: 100%;
-     height: auto; 
-      line-height: 0;
-      position: relative;
-    }
-    .main__img img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      display: block;
-    }
+@media (max-width: 767px) {
+  .header__inner {
+    padding: 0 2.2rem;
   }
-  @media (max-width: 840px) {
-    .main-content__box::after {
-      position: absolute;
-      content: "";
-      border: 0.2rem solid #000;
-      inset: 1rem;
-    }
-   }
+  .header__logo {
+    padding: 0;
+  }
+  .nav {
+    display: none;
+  }
+  #main {
+    height: auto;
+    position: relative;
+    flex-direction: column-reverse;
+  }
+  #main .pc-only {
+    display: none;
+  }
+  .main-content__box {
+    font-size: 2rem;
+    width: 100%;
+    height: 18.8rem;
+    position: absolute;
+    bottom: -9.2rem;
+    left: 0;
+    z-index: 10;
+    background-image: url(../img/header-logo_sp.svg);
+  }
+  .main-content__box::after {
+    border: 0.1rem solid #000;
+    top: 1.2rem;
+    right: 1.2rem;
+    left: 1.2rem;
+    bottom: 1.4rem;
+  }
+  .main-content__box .sp-only {
+    display: inline;
+  }
+  .main-text {
+    font-size: 2rem;
+  }
+  .top-text {
+    position: relative;
+    top: -4.2rem;
+    line-height: 1;
+  }
+  .sp-space {
+    display: inline-block;
+    margin-right: 1.4rem;
+  }
+  .middle-text {
+    position: relative;
+    top: -4.5rem;
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0;
+    margin-top: 1.4rem;
+  }
+  .bottom-text {
+    position: relative;
+    left: 0;
+    top: -4.4rem;
+    line-height: 1;
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+  .back-black {
+    display: inline-block;
+    font-size: 3.5rem;
+    line-height: 1;
+    padding: 1rem 0.8rem 1rem;
+    margin: 0;
+  }
+  .main__logo {
+    width: calc(100 / 600 * 100vw);
+    bottom: -0.5rem;
+  }
+  .main__img {
+    width: 100%;
+    height: auto;
+    line-height: 0;
+    position: relative;
+  }
+  .main__img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    display: block;
+  }
+}
 /*--------------------------
 greeting
 ------------------------------------------*/
 .greeting {
-  padding: 6rem 10rem;
+  padding: 6rem 0;
 }
 .greeting__top {
   font-style: italic;
@@ -333,12 +344,12 @@ greeting           SP
    =========================== */
 @media (max-width: 1011px) {
   .greeting {
-    padding: 4.3rem 2rem 5rem;
+    padding: 4.3rem 0 5rem;
   }
 }
 @media (max-width: 767px) {
   .greeting {
-    padding: 4.4rem 2rem 0.1rem;
+    padding: 4.4rem 0 0.1rem;
     margin: 0;
   }
   .greeting__top {
@@ -370,13 +381,13 @@ reason
 #reason {
   background-color: #fcf6e7;
   position: relative;
-  padding: 6rem 10rem 1rem;
+  padding: 6rem 0 1rem;
 }
 .triangle {
   width: 28.7rem;
   height: 12.3rem;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
-  background-color: #fbedd3;
+  background-color: #FAEDD2;
   position: absolute;
   content: "";
   top: 0;
@@ -424,7 +435,7 @@ reason            SP
    =========================== */
 @media (max-width: 1011px) {
   #reason {
-    padding: 5rem 2rem 1rem;
+    padding: 5rem 0 1rem;
   }
   .reason__ttl {
     margin-top: 1rem;
@@ -440,7 +451,7 @@ reason            SP
 
 @media (max-width: 767px) {
   #reason {
-    padding: 5.4rem 2rem 0;
+    padding: 5.4rem 0 0;
     width: 100%;
   }
   .triangle {
@@ -494,7 +505,7 @@ reason            SP
 menu 
    =========================== */
 .menu {
-  padding: 7rem 10rem 6rem;
+  padding: 7rem 0 6rem;
 }
 .menu .section__ttl {
   margin-bottom: 4rem;
@@ -520,12 +531,12 @@ menu        sp
    =========================== */
 @media (max-width: 1011px) {
   .menu {
-    padding: 7rem 2rem 6rem;
+    padding: 7rem 0 6rem;
   }
 }
 @media (max-width: 767px) {
   .menu {
-    padding: 2.4rem 2rem 0.4rem;
+    padding: 2.4rem 0 0.4rem;
   }
   .menu__list {
     flex-direction: column;
@@ -551,7 +562,7 @@ menu        sp
 .news__section {
   position: relative;
   background-color: #fcf6e7;
-  padding: 6rem 10rem;
+  padding: 6rem 0;
 }
 .news__list {
   list-style: none;
@@ -593,7 +604,7 @@ time {
    =========================== */
 @media (max-width: 1011px) {
   .news__section {
-    padding: 6rem 2rem;
+    padding: 6rem 0;
   }
   .news__item {
     height: 10rem;
@@ -601,7 +612,7 @@ time {
 }
 @media (max-width: 767px) {
   .news__section {
-    padding: 5.6rem 2rem 4.8rem;
+    padding: 5.6rem 0 4.8rem;
   }
   .news__section .section__ttl {
     margin-bottom: 3.3rem;
@@ -639,7 +650,7 @@ time {
    info
    =========================== */
 #info {
-  padding: 7rem 10rem 3rem;
+  padding: 7rem 0 3rem;
 }
 #info .section__ttl {
   margin-bottom: 2rem;
@@ -706,13 +717,13 @@ time {
    =========================== */
 @media (max-width: 1011px) {
   #info {
-    padding: 7rem 2rem 4rem;
+    padding: 7rem 0 4rem;
   }
 }
 
 @media (max-width: 767px) {
   #info {
-    padding: 5.8rem 2rem 2rem;
+    padding: 5.8rem 0 2rem;
     margin: 0;
   }
   .info {
@@ -727,7 +738,7 @@ time {
   .company-name {
     font-size: 2.2rem;
     font-weight: bold;
-  line-height: 1.3;
+    line-height: 1.3;
   }
   .company-address .sp-only {
     display: inline;
@@ -777,7 +788,7 @@ contact
 #contact {
   background-color: #fcf6e7;
   position: relative;
-  padding: 6.9rem 10rem 6rem;
+  padding: 6.9rem 0 6rem;
 }
 #contact .section__ttl {
   margin-bottom: 2.5rem;
@@ -838,12 +849,12 @@ contact       SP
    =========================== */
 @media (max-width: 1011px) {
   #contact {
-    padding: 7rem 2rem 6rem;
+    padding: 7rem 0 6rem;
   }
 }
 @media (max-width: 767px) {
   #contact {
-    padding: 5.5rem 2rem 5rem;
+    padding: 5.5rem 0 5rem;
   }
   .contact__inner {
     margin-top: 3rem;
