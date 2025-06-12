@@ -54,7 +54,11 @@
         </p>
         <p class="main-text middle-text"><span class="back-black">効率重視</span> の</p>
         <p class="main-text bottom-text">
-          <span class="dots">あなた</span>のための<br class="pc-only" />パーソナルジムです
+          <span class="dots">
+            <span class="char">あ</span>
+            <span class="char">な</span>
+            <span class="char">た</span>
+          </span>のための<br class="pc-only" />パーソナルジムです
         </p>
       </div>
       <div class="main__img">
@@ -66,7 +70,7 @@
     </main>
 
     <section id="greeting" class="greeting ">
-      <h2 class="greeting__top inner">
+      <h2 class="greeting__top">
         たった15分で、<br class="sp-only" />体幹を変える、未来を変える。
       </h2>
       <p class="greeting__text inner" >
@@ -127,7 +131,7 @@
 
           <div class="reason__item">
             <div class="reason__content">
-              <h4 class="reason__ttl">AI×トレーナーでさらに効率的に</h4>
+              <h4 class="reason__ttl">AI×&nbsp;トレーナーでさらに効率的に</h4>
               <p class="reason__desc">
                 独自に開発したAIアプリとトレーナーの経験値で、お客様のフィジカルからメンタルまで、ダブルでサポートいたします。
               </p>
@@ -139,7 +143,7 @@
                 srcset="./img/about_03_sp.jpg"
               />
               <img
-                src="./img/about_03.png"
+                src="./img/about_03.jpg"
                 alt="トレーナーと笑顔で会話する女性"
                 loading="lazy"/>
             </picture>
@@ -263,7 +267,7 @@
         <div class="info__inner">
           <address>
             <p class="company-name">コアジム</p>
-            <p class="company-address">〒900-0015 <br class="sp-only">沖縄県那覇市久茂地○丁目○-○</p>
+            <p class="company-address">〒900-0015 <br class="sp-only">沖縄県那覇市久茂地○丁目<span class="no-break">○-○</span></p>
             <p class="company-tel">電話：<span>000-0000-0000</span></p>
             <p class="company-email">
               メール：<a href="mailto:info@example.com">info@example.com</a>
@@ -298,9 +302,7 @@
             <label for="message">内　容</label>
             <textarea name="message" id="message" required></textarea>
           </div>
-          <div class="submit-btn">
-          <button type="submit">送 信</button>
-          </div>
+          <button type="submit" class="submit-btn">送 信</button>
         </form>
       </div>
     </section>
