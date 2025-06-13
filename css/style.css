@@ -730,6 +730,7 @@ time {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* height: 30rem; */
 }
 
 /* .map {
@@ -996,13 +997,26 @@ footer
    =========================== */
 #footer {
   background-color: #e5a414;
-  background-image: url(../img/logo.png);
-  background-repeat: no-repeat;
-  background-position: calc(100% - 2.8rem) center;
   padding: 2.4rem 0 6rem;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
+  position: relative;
+}
+
+#footer .inner {
+  position: relative;
+}
+#footer .inner::after {
+  content:"";
+  position: absolute;
+  top: -4.5rem;
+  right: 2.8rem;
+  background-image: url(../img/footer_logo.pc.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 19.4rem;
+  height: 27rem;
 }
 .footer__nav {
   padding-bottom: 1rem;
@@ -1016,7 +1030,7 @@ footer
   display: flex;
   column-gap: 1.4rem;
   padding-left: 2.5rem;
-  padding-bottom: 0;
+  padding-bottom: 5rem;
   margin-top: 2rem;
   flex-wrap: wrap;
 }
@@ -1027,11 +1041,10 @@ footer
   padding: 2rem 0;
 }
 .footer__nav-item a {
-  color: #000;
-  transition: color 0.7s ease;
+  transition: all 0.7s ease;
 }
 .footer__nav-item a:hover {
-  color: #fbedd3;
+  opacity: 0.6;
 }
 .copyright {
   margin: 2rem 0 0.8rem;
@@ -1053,32 +1066,48 @@ footer
   height: 2.5rem;
   text-decoration: none;
   margin-left: 0.4rem;
-  transition: color 0.7s ease;
+  transition: all 0.7s ease;
 }
 .sns-icons a:hover {
-  color: #fbedd3;
+  opacity: 0.6;
 }
 .sns-icons i {
   font-size: 2.4rem;
   pointer-events: none;
-}
-.circle-icon {
-  border-radius: 50%;
-  color: #e5a414;
-  background-color: black;
-  text-decoration: none;
 }
 /* ===========================
 footer          sp
    =========================== */
 @media (max-width: 767px) {
   #footer {
-    padding: 3.4rem 0 5rem;
+    padding: 3.4rem 0 rem;
     font-size: 1.6rem;
     margin-bottom: 1rem;
+    position: relative;
+    
+    /* background-image: url(../img/footer_logo.sp.svg);
     background-size: 21rem;
-    background-position: calc(100% - 1.7rem) center;
+    background-position: calc(100% - 1.7rem) center; */
   }
+  #footer ::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 2.8rem;
+    background-image: url(../img/footer_logo.sp.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 20.4rem; */
+    /* height: 28rem; */
+  }
+  .footer__nav {
+    padding-bottom: 1rem;
+    margin-bottom: 1.4rem;
+    max-width: 73.7rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+  
   .footer__nav {
     margin-top: 0.4rem;
     margin-bottom: 2rem;
