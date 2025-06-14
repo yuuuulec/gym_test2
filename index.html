@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./CSS/reset.css" />
-    <link rel="stylesheet" href="./CSS/style.css" />  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="shortcut icon" href="./img/header_logo.png" type="image/icon">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="./img/header_logo.svg" type="image/icon">
     <title>コアジム</title>
     <meta
       name="description"
@@ -18,7 +19,7 @@
         <div class="header__logo">
           <h1 class="logo">
             <a href="index.html"
-              ><img src="./img/header_logo.png" alt="コアジム" />&ensp;コアジム</a
+              ><img src="./img/header_logo.svg" alt="コアジム" />&ensp;コアジム</a
             >
           </h1>
         </div>
@@ -49,16 +50,16 @@
 
     <main id="main">
       <div class="main-content__box">
-        <!-- <picture class="main__logo">
-          <source media="(max-width: 400px)" srcset="./img/logo_sp.svg" />
-          <img src="./img/logo_pc.svg" alt="ロゴ" />
-        </picture> -->
         <p class="main-text top-text font-style">
           15分トレーニング <br class="pc-only" /><span class="sp-only">&nbsp;&nbsp;</span>コアジムは
         </p>
         <p class="main-text middle-text"><span class="back-black">効率重視</span> の</p>
         <p class="main-text bottom-text">
-          <span class="dots">あなた</span>のための<br class="pc-only" />パーソナルジムです
+          <span class="dots">
+            <span class="char">あ</span>
+            <span class="char">な</span>
+            <span class="char">た</span>
+          </span>のための<br class="pc-only" />パーソナルジムです
         </p>
       </div>
       <div class="main__img">
@@ -70,7 +71,7 @@
     </main>
 
     <section id="greeting" class="greeting ">
-      <h2 class="greeting__top inner">
+      <h2 class="greeting__top">
         たった15分で、<br class="sp-only" />体幹を変える、未来を変える。
       </h2>
       <p class="greeting__text inner" >
@@ -84,12 +85,12 @@
 
     <section id="reason">
       <div class="inner">
-        <h3 class="section__ttl">選ばれる理由</h3>
+        <h2 class="section__ttl">選ばれる理由</h2>
         <div class="triangle"></div>
         <div class="reason__list">
           <div class="reason__item">
             <div class="reason__content">
-              <h4 class="reason__ttl">1回たった15分の時短トレーニング</h4>
+              <h3 class="reason__ttl">1回たった15分の時短トレーニング</h3>
               <p class="reason__desc">
                 トレーニングは集中力を維持しやすい15分に設定しているので、どんなに忙しい時でも効率的かつ継続しやすくなっています。
               </p>
@@ -131,7 +132,7 @@
 
           <div class="reason__item">
             <div class="reason__content">
-              <h4 class="reason__ttl">AI×トレーナーでさらに効率的に</h4>
+              <h4 class="reason__ttl">AI×&nbsp;トレーナーでさらに効率的に</h4>
               <p class="reason__desc">
                 独自に開発したAIアプリとトレーナーの経験値で、お客様のフィジカルからメンタルまで、ダブルでサポートいたします。
               </p>
@@ -143,7 +144,7 @@
                 srcset="./img/about_03_sp.jpg"
               />
               <img
-                src="./img/about_03.png"
+                src="./img/about_03.jpg"
                 alt="トレーナーと笑顔で会話する女性"
                 loading="lazy"/>
             </picture>
@@ -154,12 +155,12 @@
     </section>
 
     <section id="menu" class="menu">
-      <h3 class="section__ttl">メニュー</h3>
+      <h2 class="section__ttl">メニュー</h2>
       <div class="menu__list inner">
         <div class="menu__item">
           <div class="menu__img">
             <picture>
-              <source media="(max-width:768px)" srcset="./img/menu_01_sp.png" />
+              <source media="(max-width:768px)" srcset="./img/menu_01_sp.jpg" />
               <img
                 src="./img/menu_01.jpg"
                 alt="トレーニングをしている男性" loading="lazy"
@@ -206,7 +207,7 @@
     <section id="news" class="news__section">
       <div class="triangle"></div>
       <div class="inner">
-        <h3 class="section__ttl">お知らせ</h3>
+        <h2 class="section__ttl">お知らせ</h2>
         <ul class="news__list">
           <li class="news__item">
             <a href="#news" class="news__link">
@@ -253,7 +254,7 @@
     
 
     <section id="info">
-      <h3 class="section__ttl">アクセス</h3>
+      <h2 class="section__ttl">アクセス</h2>
       <div class="info inner">
         <div class="map">
           <iframe
@@ -267,14 +268,14 @@
         <div class="info__inner">
           <address>
             <p class="company-name">コアジム</p>
-            <p class="company-address">〒900-0015 <br class="sp-only">沖縄県那覇市久茂地○丁目○-○</p>
+            <p class="company-address">〒900-0015 <br class="sp-only">沖縄県那覇市久茂地○丁目<span class="no-break">○-○</span></p>
             <p class="company-tel">電話：<span>000-0000-0000</span></p>
             <p class="company-email">
               メール：<a href="mailto:info@example.com">info@example.com</a>
             </p>
           </address>
           <div class="business__hours">
-            <p class="hours">営業時間：5:00〜13:00、 18:00〜24:00</p>
+            <p class="hours">営業時間：5:00〜13:00、<span class="nowrap">18:00〜24:00</span></p>
             <p class="holiday">定休日：不定休</p>
           </div>
         </div>
@@ -282,7 +283,7 @@
     </section>
 
     <section id="contact">
-      <h3 class="section__ttl">お問い合わせ</h3>
+      <h2 class="section__ttl">お問い合わせ</h2>
       <div class="triangle"></div>
       <div class="contact__inner inner">
         <p class="contact__intro">
@@ -302,14 +303,13 @@
             <label for="message">内　容</label>
             <textarea name="message" id="message" required></textarea>
           </div>
-          <div class="submit-btn">
-          <button type="submit">送 信</button>
-          </div>
+          <button type="submit" class="submit-btn">送 信</button>
         </form>
       </div>
     </section>
 
     <footer id="footer">
+      <div class="inner">
         <nav class="footer__nav">
           <ul class="footer__navlist">
             <li class="footer__nav-item"><a href="index.html">トップ</a></li>
@@ -322,14 +322,15 @@
           </ul>
         </nav>
         <div class="copyright">
-          <small>&copy;Copyright0000&emsp; コアジム</small>
+          <small><span class=c-mark>&copy;</span>Copyright0000&emsp;コアジム</small>
         </div>
         <div class="sns-icons">
-          <a href="https://x.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://facebook.com/yourprofile" class="circle-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/yourprofile" target="_blank"><img src="./img/icon_twitter.svg" alt="twitter"></a>
+          <a href="https://facebook.com/yourprofile"  target="_blank"><img src="./img/icon_facebook.svg" alt="facebook"></a>
+          <a href="https://youtube.com/yourchannel" target="_blank"><img src="./img/icon_youtube.svg" alt="youtube"></a>
+          <a href="https://instagram.com/yourprofile" target="_blank"><img src="./img/icon_instagram.svg" alt="instagram"></a>
         </div> 
+      </div>
     </footer>
   </body>
 </html>
