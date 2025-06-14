@@ -14,7 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN",
+  font-family: "Yu Gothic","Yu Gothic Medium", "Hiragino Kaku Gothic ProN",
     Meiryo, sans-serif;
   font-size: 1.8rem;
   line-height: 1.5;
@@ -413,20 +413,21 @@ reason
   z-index: 1;
 }
 .reason__ttl {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   font-weight: 700;
   display: inline;
-  margin-top: 1.9rem;
   margin-bottom: 1.9rem;
-  background: linear-gradient(to bottom, transparent 73%, #e5a414 73%,#e5a414 85%,transparent 85%);
+  /* background: linear-gradient(transparent 87%, #e5a414 87%,#e5a414 100%); */
+  background: linear-gradient(to bottom ,transparent 85%, #e5a414 50%);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   flex-wrap: wrap;
+  /* font-family: "Yu Gothic"; */
 }
 .reason__item {
   display: grid;
   grid-template-columns: 45% 50%;
-  column-gap: 5.1rem;
+  column-gap: 4.4rem;
   align-items: center;
   grid-template-areas: "text image";
   margin-bottom: 4.4rem;
@@ -441,14 +442,14 @@ reason
 }
 .reason__content {
   grid-area: text;
-  margin-top: -4.5rem;
+  margin-top: 0.4rem;
   font-size: 1.8rem;
 }
 .reason__img {
   grid-area: image;
 }
 .reason__item:nth-of-type(3) .reason__content{
-  margin-top: -16rem;
+  margin-top: -11rem;
 }
 .reason__item:nth-of-type(3) .reason__img{
   margin-top: -1rem;
@@ -458,6 +459,7 @@ reason
 } 
 .reason__desc {
   line-height: 1.83;
+  margin-top: 2rem;
 }
 @media (max-width: 940px) {
 .reason__content {
@@ -593,24 +595,23 @@ menu        sp
 }
 .news__item {
   border-bottom: 1px solid #000;
-  height: 6rem;
+  height: 5.9rem;
 }
 .news__item:first-of-type {
   border-top: 1px solid #000;
 }
 .news__link {
   display: grid;
-  grid-template-columns: 13.8rem 21rem 1fr;
+  grid-template-columns: 11.8rem 21rem 1fr;
   align-items: center;
-  padding: 1.6rem 0;
+  padding: 1.5rem 0;
   text-decoration: none;
   flex-wrap: wrap;
   padding-left: 1.9rem;
 
 }
 time {
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 1.5rem;
 }
 .news__ttl {
   font-size: 2rem;
@@ -650,7 +651,9 @@ time {
   .news__item {
     font-size: 2rem;
     height: auto;
-    padding-left: 1rem;
+  }
+  .news__item a{
+    display: flex;
   }
   .news__ttl {
     margin-right: 0;
@@ -662,6 +665,7 @@ time {
     flex-direction: column;
     padding-top: 0.6rem;
     align-items: flex-start;
+    width: 100%;
   }
   time {
     width: 100%;
@@ -680,29 +684,30 @@ time {
    info
    =========================== */
 #info {
-  padding: 7rem 0 3rem;
+  padding: 7rem 0 6rem;
 }
 #info .section__ttl {
   margin-bottom: 2rem;
 }
-/* .info {
+.map {
+  width: 44rem;
+  max-width: 100%;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.info {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: stretch;
   margin-top: 2rem;
-} */
-.info {
-  display: flex;
-  gap: 4rem;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  
 }
-/* .info__inner {
+.info__inner {
   max-width: 100%;
-  margin-left: 0.6rem; 
-} */
+  margin-left: 0.6rem;
+}
 .company-name {
   font-size: 2.5rem;
   line-height: 1.5;
@@ -711,45 +716,6 @@ time {
 .company-address .sp-only {
   display: none;
 }
-.map {
-  aspect-ratio: 44 / 30;
-  width: 100%;
-  max-width: 440px;
-  flex-shrink: 0;
-}
-.map iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: 0;
-}
-
-.info__inner {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* height: 30rem; */
-}
-
-/* .map {
-  height: auto;
-}
-.map iframe {
-  height: 100%;
-  min-height: 30rem;
-} */
-/* .map {
-  width: 44rem;
-  height: 30rem;
-  max-width: 100%;
-}
-.map iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-} */
 .company-address {
   font-size: 1.8rem;
   margin-bottom: 1.3rem;
@@ -762,14 +728,16 @@ time {
 }
 .company-tel span {
   color: #e5a414;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
+  text-decoration: none;
+  /* font-weight: 700; */
 }
 .company-tel {
   margin-bottom: 0.9rem;
 }
 .company-email {
   font-size: 1.8rem;
-  padding-bottom: 2.6rem;
+  padding-bottom: 3.2rem;
   border-bottom: 1px solid #000;
 }
 .company-email:hover{
@@ -788,9 +756,12 @@ time {
   word-break: keep-all;
   line-break: strict;
 }
+.nowrap {
+  white-space: nowrap;
+}
 .holiday {
   border-bottom: 1px solid #000;
-  margin-bottom: 2.7rem;
+  /* margin-bottom: 2.7rem; */
   padding-bottom: 1.8rem;
 }
 /* ===========================
@@ -799,7 +770,6 @@ time {
    @media (max-width: 1080px) {
     .map {
       width: 44rem;
-      height: 30rem;
     }
     .map iframe {
       width: 100%;
@@ -879,7 +849,7 @@ contact
 #contact {
   background-color: #fcf6e7;
   position: relative;
-  padding: 6.9rem 0 6rem;
+  padding: 6.9rem 0 5.5rem;
 }
 #contact .section__ttl {
   margin-bottom: 2.5rem;
@@ -919,7 +889,7 @@ label {
   border-radius: 10px;
   text-align: center;
   margin-inline: auto;
-  margin-top: 2.4rem;
+  margin-top: 2rem;
   padding: 0.9rem;
   cursor: pointer;
   transition: all 0.7s;
@@ -1002,8 +972,8 @@ footer
   font-weight: bold;
   text-align: center;
   position: relative;
+  height: 27rem;
 }
-
 #footer .inner {
   position: relative;
 }
@@ -1011,7 +981,7 @@ footer
   content:"";
   position: absolute;
   top: -4.5rem;
-  right: 2.8rem;
+  right: -7.5rem;
   background-image: url(../img/footer_logo.pc.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1029,8 +999,8 @@ footer
   border-bottom: 0.8px solid black;
   display: flex;
   column-gap: 1.4rem;
-  padding-left: 2.5rem;
-  padding-bottom: 5rem;
+  padding: 0 2.5rem;
+  padding-bottom: 0.2rem;
   margin-top: 2rem;
   flex-wrap: wrap;
 }
@@ -1046,8 +1016,16 @@ footer
 .footer__nav-item a:hover {
   opacity: 0.6;
 }
+.c-mark {
+  font-size: 3rem;
+  display: inline-block;
+  transform: translateY(4px)
+}
 .copyright {
-  margin: 2rem 0 0.8rem;
+  font-size: 1.9rem;
+  margin: -1rem 0 0.6rem;
+  line-height: 1.65;
+  font-weight: normal;
 }
 .sns-icons {
   display: flex;
@@ -1063,7 +1041,7 @@ footer
   justify-content: center;
   align-items: center;
   width: 2rem;
-  height: 2.5rem;
+  height: auto;
   text-decoration: none;
   margin-left: 0.4rem;
   transition: all 0.7s ease;
@@ -1084,10 +1062,7 @@ footer          sp
     font-size: 1.6rem;
     margin-bottom: 1rem;
     position: relative;
-    
-    /* background-image: url(../img/footer_logo.sp.svg);
-    background-size: 21rem;
-    background-position: calc(100% - 1.7rem) center; */
+  
   }
   #footer ::after {
     content:"";
@@ -1131,7 +1106,7 @@ footer          sp
   .footer__navlist::after {
     content: "";
     position: absolute;
-    bottom: -2.4rem;
+    bottom: 2.4rem;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
