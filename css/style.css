@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* outline: 1px solid red; */
 }
 html {
   line-height: 1.83;
@@ -49,6 +48,9 @@ li {
   font-weight: bold;
   margin-bottom: 4.7rem;
 }
+.sp350-only {
+  display: none;
+}
 @media (max-width: 767px) {
   .inner {
     padding-left: 2rem;
@@ -62,6 +64,11 @@ li {
 @media (max-width: 930px) {
   .inner {
     padding: 0 2rem;
+  }
+}
+@media (max-width: 350px) {
+  .sp350-only {
+    display: block;
   }
 }
 /* ===========================
@@ -437,9 +444,9 @@ reason
   background: linear-gradient(to bottom, transparent 85%, #e5a414 50%);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  flex-wrap: wrap;
+  word-break: keep-all;
+  /* white-space: nowrap; */
   font-weight: 800;
-  /* font-family: "Yu Gothic"; */
 }
 .reason__item {
   display: grid;
@@ -477,11 +484,15 @@ reason
 .reason__desc {
   line-height: 1.83;
   margin-top: 2rem;
+  text-align: left;
 }
 @media (max-width: 940px) {
   .reason__content {
     margin-top: 0.5rem;
     text-align: center;
+  }
+  .reason__item {
+    /* column-gap: 2rem; */
   }
   .reason__item:nth-of-type(3) .reason__content {
     margin-top: 1rem;
@@ -625,7 +636,6 @@ menu        sp
   padding: 1.5rem 0;
   text-decoration: none;
   padding-left: 1.9rem;
-  height: 6rem;
 }
 time {
   font-size: 1.7rem;
@@ -648,9 +658,6 @@ time {
   .news__section {
     padding: 6rem 0;
   }
-  .news__link {
-    height: 6rem;
-  }
 }
 @media (max-width: 853px) {
   .news__section {
@@ -662,7 +669,7 @@ time {
 }
 @media (max-width: 767px) {
   .news__section {
-    padding: 5.8rem 0 9.5rem;
+    padding: 5.8rem 0 4.5rem;
   }
   .news__section .section__ttl {
     margin-bottom: 3.4rem;
@@ -681,7 +688,7 @@ time {
     padding: 0;
   }
   .news__item {
-    /* padding: 3rem 0 5rem 1rem; */
+    padding: 3rem 0 2.9rem 1rem;
   }
   time {
     grid-row: 1;
@@ -705,10 +712,10 @@ time {
    info
    =========================== */
 #info {
-  padding: 6.6rem 0 6rem;
+  padding: 6.8rem 0 6rem;
 }
 #info .section__ttl {
-  margin-bottom: 2rem;
+  margin-bottom: 2.6rem;
 }
 .map {
   width: 44rem;
@@ -732,7 +739,7 @@ time {
 .company-name {
   font-size: 2.5rem;
   line-height: 1.5;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
   font-weight: 700;
 }
 .company-address .sp-only {
@@ -997,7 +1004,7 @@ footer
   font-weight: bold;
   text-align: center;
   position: relative;
-  height: 28rem;
+  height: 26.3rem;
 }
 .footer__nav {
   padding-bottom: 1rem;
@@ -1014,11 +1021,12 @@ footer
   right: -14.3rem;
   background-image: url(../img/footer_logo.pc.svg);
   background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
   background-position: center;
   width: 19.4rem;
-  height: 27rem;
+  height: 26.5rem;
 }
-
 .footer__navlist {
   border-bottom: 0.8px solid black;
   display: flex;
