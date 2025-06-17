@@ -1007,6 +1007,7 @@ footer
   overflow: hidden;
   width: 19.4rem;
   height: 26.5rem;
+  pointer-events: none;
 }
 .footer__nav {
   padding-bottom: 1.1rem;
