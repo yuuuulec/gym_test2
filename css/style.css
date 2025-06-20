@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: 1px solid red;
 }
 html {
   line-height: 1.83;
@@ -39,12 +40,12 @@ li {
   list-style: none;
 }
 .inner {
-  max-width: 880px;
+  max-width: 920px;
   margin-inline: auto;
   width: 100%;
   box-sizing: border-box;
   padding-left: 2rem;
-    padding-right: 2rem;
+  padding-right: 2rem;
 }
 .section__ttl {
   font-size: 2.5rem;
@@ -59,19 +60,12 @@ li {
 }
 @media (max-width: 767px) {
   .inner {
-    /* padding-left: 2rem;
-    padding-right: 2rem; */
     max-width: 77rem;
   }
   .section__ttl {
     margin-bottom: 4rem;
   }
 }
-/* @media (max-width: 930px) {
-  .inner {
-    padding: 0 2rem;
-  }
-} */
 @media (max-width: 350px) {
   .sp350-only {
     display: block;
@@ -90,9 +84,7 @@ header
 .header__inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-top: 0.2rem;
-  margin-inline: auto;
+  align-items: center;  margin-inline: auto;
   max-width: 108rem;
   height: 4.9rem;
   max-width: 96rem;
@@ -107,7 +99,9 @@ header
 }
 .header__logo a {
   display: block;
-  padding: 0.5rem 0.2rem 0.2rem;
+  height: 5rem;
+  line-height: 5rem;
+  padding: 0;
 }
 .logo img {
   width: 2.4rem;
@@ -170,7 +164,8 @@ main
   flex-shrink: 0;
   background-image: url(../img/logo_pc.svg);
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: right  bottom -2.5rem;
+  background-size: max(18.5vw, 16.5rem) calc(min(15vw, 16.5rem) * (418 / 160));
 }
 .main-content__box::after {
   position: absolute;
@@ -274,10 +269,13 @@ main
     width: 100%;
     height: 19rem;
     position: absolute;
-    bottom: -9.2rem;
+    bottom: -14rem;
     left: 0;
     z-index: 10;
     background-image: url(../img/header-logo_sp.svg);
+    /* background-size: 37vw auto; */
+    background-size: clamp(100px, 37vw, 140px);
+    background-position: 100% 0;
   }
   .main-content__box::after {
     border: 0.1rem solid #000;
@@ -401,7 +399,7 @@ greeting           SP
 }
 @media (max-width: 767px) {
   .greeting {
-    padding: 4.4rem 0 0.1rem;
+    padding: 8.8rem 0 0.1rem;
     margin: 0;
   }
   .greeting__top {
@@ -754,9 +752,6 @@ time {
   word-break: keep-all;
   white-space: normal;
 }
-.no-break {
-  white-space: nowrap;
-}
 .company-tel span {
   color: #e5a414;
   font-size: 2.5rem;
@@ -770,9 +765,12 @@ time {
   font-size: 1.8rem;
   padding-bottom: 2.8rem;
   border-bottom: 1px solid #000;
+  transition: transform 0.3s ease,color 0.3s ease;
+  position: relative;
 }
-.company-email:hover {
+.email-text:hover {
   cursor: pointer;
+  opacity: 0.6;
 }
 .company-tel span,
 .company-email a {
@@ -810,6 +808,11 @@ time {
 @media (max-width: 1011px) {
   #info {
     padding: 7rem 0 4rem;
+  }
+}
+@media (max-width: 890px) {
+  .company-address .sp-only {
+    display: inline;
   }
 }
 @media (max-width: 767px) {
@@ -902,7 +905,9 @@ textarea {
   background-color: #fff;
   margin-bottom: 3rem;
   width: 100%;
-  padding: 0.6rem;
+  padding: 1rem;
+  font-weight: normal;
+  font-size: 1.6rem;
 }
 label {
   width: 100%;
@@ -999,7 +1004,7 @@ footer
    =========================== */
 #footer {
   background-color: #e5a414;
-  padding: 2.3rem 0 6rem;
+  padding: 2.3rem 0 6.2rem;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -1065,8 +1070,8 @@ footer
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 2.3rem;
-  height: auto;
+  width: 2.1rem;
+  height: 3rem;
   text-decoration: none;
   margin-left: 0.4rem;
   transition: all 0.7s ease;
