@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
 }
 html {
   line-height: 1.83;
@@ -65,6 +64,9 @@ li {
   .section__ttl {
     margin-bottom: 4rem;
   }
+  .sp350-only {
+    display: none;
+}
 }
 @media (max-width: 350px) {
   .sp350-only {
@@ -310,7 +312,7 @@ main
   .bottom-text {
     position: relative;
     left: 0;
-    top: -2.4rem;
+    top: -2.6rem;
     line-height: 1;
     margin: 0;
     margin-top: 0.5rem;
@@ -328,10 +330,10 @@ main
     bottom: -0.5rem;
   }
   .char::before {
-    top: -1.1rem;
+    top: -1.2rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
   .main__img {
     width: 100%;
@@ -452,15 +454,14 @@ reason
   /* background: linear-gradient(to bottom, transparent 85%, #e5a414 50%); */
   background: linear-gradient(to bottom, transparent 80%, #e5a414 30%);
   padding-bottom: 0.1rem;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  word-break: keep-all;
+  /* box-decoration-break: clone;
+  -webkit-box-decoration-break: clone; */
+  /* word-break: keep-all; */
   font-weight: 800;
 }
 .reason__item {
   display: grid;
-  grid-template-columns: 45% 50%;
-  column-gap: 4.4rem;
+  grid-template-columns: 50% 50%;
   align-items: center;
   grid-template-areas: "text image";
   margin-bottom: 4.4rem;
@@ -468,7 +469,7 @@ reason
   width: 100%;
 }
 .reason__item:nth-child(even) {
-  grid-template-columns: 50% 45%;
+  grid-template-columns: 50% 50%;
   grid-template-areas: "image text";
   margin-bottom: 5.4rem;
   margin-left: -0.3rem;
@@ -477,7 +478,12 @@ reason
   grid-area: text;
   margin-top: 0.4rem;
   font-size: 1.8rem;
+  padding-right: 4.5rem;
 }
+.reason__item:nth-child(even) .reason__content {
+  padding-left: 4.5rem;
+  padding-right: 0;
+}   
 .reason__img {
   grid-area: image;
 }
@@ -486,9 +492,6 @@ reason
 }
 .reason__item:nth-of-type(3) .reason__img {
   margin-top: -1rem;
-}
-.reason__item:nth-of-type(3) {
-  column-gap: 4.5rem;
 }
 .reason__desc {
   line-height: 1.83;
@@ -506,7 +509,7 @@ reason
 }
 @media (max-width: 767px) {
   #reason {
-    padding: 5.4rem 0 1rem;
+    padding: 5.4rem 0 1.3rem;
     width: 100%;
   }
   .triangle {
@@ -534,6 +537,7 @@ reason
   .reason__content {
     width: 100%;
     /* text-align: left; */
+    padding-right: 0;
     order: 2;
     margin-top: 1rem;
   }
@@ -546,9 +550,9 @@ reason
   .reason__item:nth-child(even) {
     flex-direction: column;
   }
-  /* .reason__item:nth-of-type(3) {
-    padding-bottom: 3rem;
-  } */
+  .reason__item:nth-child(even) .reason__content {
+    padding-left: 0;
+  }
   .reason__item:nth-of-type(3) .reason__ttl {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
@@ -585,6 +589,7 @@ menu
 .menu__desc {
   font-size: 1.7rem;
   line-height: 1.765;
+}
 }
 /* ===========================
 menu        sp
@@ -637,9 +642,9 @@ menu        sp
 }
 .news__link {
   display: grid;
-  grid-template-columns: 11.8rem 21rem 1fr;
+  grid-template-columns: 11.7rem 20.9rem 1fr;
   align-items: center;
-  padding: 1.5rem 0 1.6rem;
+  padding: 1.6rem 0 1.5rem;
   text-decoration: none;
   padding-left: 1.9rem;
 }
@@ -675,7 +680,7 @@ time {
     padding: 5.8rem 0 4.5rem;
   }
   .news__section .section__ttl {
-    margin-bottom: 3.4rem;
+    margin-bottom: 3.7rem;
   }
   .news__item {
     font-size: 2rem;
@@ -687,7 +692,7 @@ time {
     grid-template-rows: 2.5rem 2.5rem auto;
     width: 100%;
     box-sizing: border-box;
-    padding: 3rem 0 2.7rem 1rem;
+    padding: 3rem 0 2.6rem 1rem;
 
   }
   time {
@@ -712,7 +717,7 @@ time {
    info
    =========================== */
 #info {
-  padding: 6.4rem 0 6rem;
+  padding: 6.6rem 0 6rem;
 }
 #info .section__ttl {
   margin-bottom: 2.6rem;
@@ -738,8 +743,8 @@ time {
 }
 .company-name {
   font-size: 2.5rem;
-  line-height: 1.5;
-  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
   font-weight: 700;
 }
 .company-address .sp-only {
@@ -826,7 +831,7 @@ time {
   }
   .info__inner {
     width: 100%;
-    margin-top: -3.2rem;
+    margin-top: -3rem;
     margin-left: 0;
   }
   .company-name {
@@ -926,7 +931,7 @@ label {
   border-radius: 10px;
   text-align: center;
   margin-inline: auto;
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   padding: 0.9rem;
   cursor: pointer;
   transition: all 0.7s;
@@ -986,7 +991,7 @@ contact       SP
     width: 100%;
     padding: 0.8rem;
     font-size: 2rem;
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
   }
   textarea {
     width: 100%;
@@ -1026,7 +1031,7 @@ footer
 }
 .footer__nav {
   padding-bottom: 1.1rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.7rem;
   max-width: 73.7rem;
   width: 100%;
   margin-inline: auto;
@@ -1036,7 +1041,6 @@ footer
   display: flex;
   column-gap: 1.4rem;
   padding: 0 2.5rem;
-  padding-bottom: 0.1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
 }
@@ -1062,18 +1066,17 @@ footer
   text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.2rem;
   margin-inline: auto;
+  width: auto; 
+  height: auto;
 }
 .sns-icons a {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 2.1rem;
-  height: 3rem;
   text-decoration: none;
-  margin-left: 0.4rem;
   transition: all 0.7s ease;
 }
 .sns-icons a:hover {
@@ -1126,12 +1129,7 @@ footer          sp
     padding: 0.2rem 0 0.2rem;
   }
   .sns-icons {
-    text-align: center;
-    gap: 0;
-    margin-top: 2rem;
-  }
-  .sns-icons a {
-    margin-right: 0.3rem;
-    width: 2.5rem;
+    gap: 1rem;
+    margin-top: 2.5rem;
   }
 }
