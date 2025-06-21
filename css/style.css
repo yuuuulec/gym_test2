@@ -167,7 +167,7 @@ main
   background-image: url(../img/logo_pc.svg);
   background-repeat: no-repeat;
   background-position: right  bottom -2.5rem;
-  background-size: max(18.5vw, 16.5rem) calc(min(15vw, 16.5rem) * (418 / 160));
+  background-size: max(18.5vw, 16.5rem) calc(max(15vw, 16.5rem) * (418 / 160));
 }
 .main-content__box::after {
   position: absolute;
@@ -1091,7 +1091,7 @@ footer          sp
    =========================== */
 @media (max-width: 767px) {
   #footer {
-    padding: 4rem 0 7.3rem;
+    padding: 4rem 0 6.6rem;
   }
   #footer::after {
     width: 19rem;
