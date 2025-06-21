@@ -32,7 +32,7 @@ section {
 }
 @media (max-width: 767px) {
 #greeting {
-  scroll-margin-top: -7rem;
+  scroll-margin-top: -11rem;
 }
 }
 li {
@@ -51,7 +51,6 @@ li {
   text-align: center;
   position: relative;
   z-index: 10;
-  font-weight: bold;
   margin-bottom: 4.7rem;
 }
 .sp350-only {
@@ -97,7 +96,6 @@ header
   justify-content: flex-start;
   padding-left: 2.8rem;
   font-size: 2.2rem;
-  font-weight: bold;
 }
 .header__logo a {
   display: block;
@@ -122,7 +120,6 @@ header
   height: 5rem;
   font-size: 1.4rem;
   padding: 0;
-  font-weight: bold;
 }
 .nav__item span {
   position: relative;
@@ -161,7 +158,6 @@ main
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-weight: bold;
   position: relative;
   flex-shrink: 0;
   background-image: url(../img/logo_pc.svg);
@@ -271,7 +267,7 @@ main
     width: 100%;
     height: 19rem;
     position: absolute;
-    bottom: -14rem;
+    bottom: -9rem;
     left: 0;
     z-index: 10;
     background-image: url(../img/header-logo_sp.svg);
@@ -378,7 +374,6 @@ greeting
   font-style: italic;
   line-height: 1.7;
   margin-bottom: 1.6rem;
-  font-weight: bold;
   text-align: center;
   padding-right: 1.2rem;
   width: 100%;
@@ -401,7 +396,7 @@ greeting           SP
 }
 @media (max-width: 767px) {
   .greeting {
-    padding: 8.8rem 0 0.1rem;
+    padding: 3.9rem 0 0.1rem;
     margin: 0;
   }
   .greeting__top {
@@ -410,7 +405,6 @@ greeting           SP
     margin-top: 5rem;
     margin-bottom: 1.8rem;
     padding-top: 5rem;
-    font-weight: bold;
     text-align: center;
     padding-right: 0;
   }
@@ -454,10 +448,6 @@ reason
   /* background: linear-gradient(to bottom, transparent 85%, #e5a414 50%); */
   background: linear-gradient(to bottom, transparent 80%, #e5a414 30%);
   padding-bottom: 0.1rem;
-  /* box-decoration-break: clone;
-  -webkit-box-decoration-break: clone; */
-  /* word-break: keep-all; */
-  font-weight: 800;
 }
 .reason__item {
   display: grid;
@@ -601,7 +591,7 @@ menu        sp
 }
 @media (max-width: 767px) {
   .menu {
-    padding: 5.2rem 0 0.4rem;
+    padding: 4.9rem 0 0.4rem;
   }
   .menu__list {
     flex-direction: column;
@@ -655,7 +645,6 @@ time {
   font-size: 2rem;
   line-height: 1.25;
   color: #e5a414;
-  font-weight: 800;
 }
 .news__desc {
   text-align: left;
@@ -677,7 +666,7 @@ time {
 }
 @media (max-width: 767px) {
   .news__section {
-    padding: 5.8rem 0 4.5rem;
+    padding: 5.8rem 0 4.7rem;
   }
   .news__section .section__ttl {
     margin-bottom: 3.7rem;
@@ -745,7 +734,6 @@ time {
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 1.6rem;
-  font-weight: 700;
 }
 .company-address .sp-only {
   display: none;
@@ -761,7 +749,6 @@ time {
   color: #e5a414;
   font-size: 2.5rem;
   text-decoration: none;
-  font-weight: 700;
 }
 .company-tel {
   margin-bottom: 0.9rem;
@@ -770,10 +757,13 @@ time {
   font-size: 1.8rem;
   padding-bottom: 2.8rem;
   border-bottom: 1px solid #000;
-  transition: transform 0.3s ease,color 0.3s ease;
+  transition: transform 0.7s ease,color 0.7s ease;
   position: relative;
 }
-.email-text:hover {
+.email-text a {
+  transition: opacity 0.7s ease;
+}
+.email-text a:hover {
   cursor: pointer;
   opacity: 0.6;
 }
@@ -822,7 +812,7 @@ time {
 }
 @media (max-width: 767px) {
   #info {
-    padding: 5.8rem 0 4rem;
+    padding: 6.2rem 0 4rem;
     margin: 0;
   }
   .info {
@@ -831,7 +821,7 @@ time {
   }
   .info__inner {
     width: 100%;
-    margin-top: -3rem;
+    margin-top: -3.5rem;
     margin-left: 0;
   }
   .company-name {
@@ -917,7 +907,6 @@ textarea {
 label {
   width: 100%;
   height: 3rem;
-  font-weight: bold;
   padding-top: 1rem;
 }
 .submit-btn {
@@ -1011,7 +1000,6 @@ footer
   background-color: #e5a414;
   padding: 2.3rem 0 6.2rem;
   font-size: 2rem;
-  font-weight: bold;
   text-align: center;
   position: relative;
 }
@@ -1091,7 +1079,7 @@ footer          sp
    =========================== */
 @media (max-width: 767px) {
   #footer {
-    padding: 4rem 0 6.6rem;
+    padding: 4.2rem 0 6.6rem;
   }
   #footer::after {
     width: 19rem;
@@ -1101,7 +1089,7 @@ footer          sp
     margin-top: 0.4rem;
     margin-bottom: 2rem;
     padding: 0;
-    padding-bottom: 0.2rem;
+    padding-bottom: 0.6rem;
     line-height: 1;
     font-size: 1.8rem;
     position: relative;
@@ -1113,12 +1101,13 @@ footer          sp
     row-gap: 1.4rem;
     column-gap: 1.4rem;
     justify-content: center;
-    padding-bottom: 2.3rem;
+    padding-bottom: 2.4rem;
     position: relative;
     border: none;
     padding-left: 0;
     padding-right: 0;
     font-size: 1.8rem;
+    line-height: 1.6rem;
     margin-top: 1.2rem;
     border-bottom: 0.8px solid black;
   }
@@ -1129,7 +1118,7 @@ footer          sp
     padding: 0.2rem 0 0.2rem;
   }
   .sns-icons {
-    gap: 1rem;
-    margin-top: 2.5rem;
+    gap: 1.2rem;
+    margin-top: 2.2rem;
   }
 }
