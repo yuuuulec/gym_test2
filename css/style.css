@@ -1024,7 +1024,7 @@ footer
    =========================== */
 #footer {
   background-color: #e5a414;
-  padding: 2.3rem 0 4.2rem;
+  padding: 4.5rem 0 6.1969rem;
   font-size: 2rem;
   text-align: center;
   position: relative;
@@ -1033,21 +1033,22 @@ footer
 #footer::after {
   content: "";
   position: absolute;
-  background-image: url(../img/footer_logo.pc.svg);
+  background-image: url(../img/footer_logo.svg);
   bottom: 0;
   right: max(2.8rem, calc((100vw - 1080px) / 2 + 2.8rem));
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center bottom;
+  background-position: center;
   overflow: hidden;
-  width: 19.4rem;
-  height: 26.5rem;
+  width: 21.3rem;
+  height: 27rem;
   pointer-events: none;
 }
 .footer__nav {
   padding-bottom: 1.1rem;
-  margin-bottom: 1.7rem;
-  max-width: 73.7rem;
+  /* padding: 0 0.1rem 1.1rem; */
+  margin-bottom: 1rem;
+  max-width: 74rem;
   width: 100%;
   margin-inline: auto;
 }
@@ -1055,16 +1056,16 @@ footer
   border-bottom: 0.8px solid black;
   display: flex;
   justify-content: center;
-  column-gap: 1.4rem;
-  padding: 0 2.5rem;
-  margin-top: 2rem;
+  /* gap: 0.6rem; */
+  /* padding: 0 2.5rem; */
+  font-size: 2rem;
   flex-wrap: wrap;
 }
 .footer__navlist a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 2rem 0.7rem;
 }
 .footer__nav-item a {
   transition: all 0.7s ease;
@@ -1074,8 +1075,8 @@ footer
 }
 .copyright {
   font-size: 2rem;
-  margin: 0.8rem 0 0.6rem;
-  line-height: 1.65;
+  margin: 1.4rem 0 0.8rem;
+  line-height: 1.6;
 }
 .sns-icons {
   display: flex;
@@ -1099,35 +1100,32 @@ footer
   opacity: 0.6;
 }
 .sns-icons i {
-  font-size: 2.4rem;
+  font-size: 2rem;
   pointer-events: none;
 }
 /* ===========================
 footer          sp
    =========================== */
-   @media (max-width: 780px) {
+   /* @media (max-width: 780px) {
     #footer {
 padding-top: 2rem 0 2rem;
-    }
-    #footer::after {
-      /* width: 20.1rem;
-  height: 40rem; */
-  background-size: contain;
-    }
-    .footer__navlist a {
-padding: 1rem;
-    }
-    .footer__navlist {
+    } */
+    /* #footer::after {
+      width: 20.1rem;
+    } */
+    /* .footer__navlist a {
+padding: 0.5rem;
+    } */
+    /* .footer__navlist {
       margin-top: 0;
-    }
-  
-  }
+    } */
 @media (max-width: 767px) {
   #footer {
-    padding: 4.2rem 0 6.6rem;
-  }
+    padding: 4.2rem 0 4.8rem;
+  } 
   #footer::after {
-    /* width: 20.rem; */
+    width: 18.5rem;
+    height: 28rem;
     background-position: right bottom;
   }
   .footer__nav {
@@ -1165,5 +1163,16 @@ padding: 1rem;
   .sns-icons {
     gap: 1.2rem;
     margin-top: 2.2rem;
+  }
+}
+@media (max-width: 665px) {
+  #footer::after {
+    width: 20.5rem;
+    height: 28rem;
+  }
+}
+@media (max-width: 382px) {
+  #footer::after {
+    background-image: url(../img/logo_pc.svg);  bottom: 0;
   }
 }
