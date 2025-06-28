@@ -110,7 +110,6 @@ header
   padding: 0;
   cursor: pointer;
   transition: opacity 0.7s ease;
-
 }
 .header__logo a:hover{
   opacity: 0.6;
@@ -1106,26 +1105,11 @@ footer
 /* ===========================
 footer          sp
    =========================== */
-   /* @media (max-width: 780px) {
-    #footer {
-padding-top: 2rem 0 2rem;
-    } */
-    /* #footer::after {
-      width: 20.1rem;
-    } */
-    /* .footer__navlist a {
-padding: 0.5rem;
-    } */
-    /* .footer__navlist {
-      margin-top: 0;
-    } */
 @media (max-width: 767px) {
   #footer {
     padding: 4.2rem 0 4.8rem;
   } 
   #footer::after {
-    width: 18.5rem;
-    height: 28rem;
     background-position: right bottom;
   }
   .footer__nav {
@@ -1171,7 +1155,7 @@ padding: 0.5rem;
     height: 28rem;
   }
 }
-@media (max-width: 382px) {
+@media (max-width: 369px) {
   #footer::after {
     background-image: url(../img/logo_pc.svg);  bottom: 0;
   }
