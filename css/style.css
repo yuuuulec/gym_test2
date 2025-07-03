@@ -359,7 +359,7 @@ padding-left: 0;
 }
 @media (max-width: 350px) {
   .char::before {
-    top: -0.4rem;
+    top: -0.7rem;
     font-size: 0.6rem;
   }
   .main-content__box {
@@ -391,14 +391,14 @@ padding-left: 0;
 greeting
 ------------------------------------------*/
 .greeting {
-  padding: 5.55rem 0 6rem;
+  padding: 6rem 0 6rem;
 }
 .greeting__top {
   font-style: italic;
   color: #e5a414;
   font-size: 3rem;
   line-height: 1.7;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   padding-right: 1.2rem;
   width: 100%;
@@ -421,14 +421,14 @@ greeting           SP
 }
 @media (max-width: 767px) {
   .greeting {
-    padding: 3.9rem 0 0.1rem;
+    padding: 3.7rem 0 0.1rem;
     margin: 0;
   }
   .greeting__top {
     font-size: 2.3rem;
     line-height: 1.52;
     margin-top: 5rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.9rem;
     padding-top: 5rem;
     text-align: center;
     padding-right: 0;
@@ -452,7 +452,7 @@ reason
 #reason {
   background-color: #fcf6e7;
   position: relative;
-  padding: 6.5rem 0 1rem;
+  padding: 6.2rem 0 1rem;
 }
 .triangle {
   width: 28.7rem;
@@ -470,15 +470,13 @@ reason
   font-size: 2.2rem;
   display: inline;
   background: linear-gradient(to bottom, transparent 80%, #e5a414 30%);
-  padding-bottom: 0.1rem;
 }
 .reason__item {
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
   grid-template-areas: "text image";
-  margin-bottom: 4.2rem;
-  margin-top: 4rem;
+  margin-bottom: 4.3rem;
   text-align: left;
   width: 100%;
 }
@@ -616,7 +614,7 @@ menu        sp
 }
 @media (max-width: 767px) {
   .menu {
-    padding: 5rem 0 0.4rem;
+    padding: 5.1rem 0 0.4rem;
   }
   .menu__list {
     flex-direction: column;
@@ -642,7 +640,7 @@ menu        sp
 .news__section {
   position: relative;
   background-color: #fcf6e7;
-  padding: 6.2rem 0;
+  padding: 6rem 0;
 }
 .news__list {
   list-style: none;
@@ -699,7 +697,7 @@ time {
     padding: 5.9rem 0 4.7rem;
   }
   .news__section .section__ttl {
-    margin-bottom: 3.4rem;
+    margin-bottom: 3.45rem;
   }
   .news__item {
     font-size: 2rem;
@@ -869,7 +867,7 @@ opacity: 0.6;
   }
   .company-tel {
     font-size: 1.6rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.9rem;
   }
   .company-tel a:hover{
     opacity: 0.6;
@@ -883,16 +881,16 @@ opacity: 0.6;
   }
   .company-email {
     font-size: 1.6rem;
-    padding-bottom: 1.6rem;
+    padding-bottom: 1.4rem;
   }
   .holiday {
     border-bottom: 1px solid #000;
-    margin: -2rem 0 1.2rem;
+    margin: -2rem 0 1.3rem;
     padding-bottom: 1.5rem;
   }
   .hours {
     margin: 0;
-    padding: 1.5rem 0 2.5rem;
+    padding: 1.6rem 0 2.5rem;
   }
   .business__hours {
     margin-left: 0;
@@ -957,7 +955,7 @@ label {
   border-radius: 10px;
   text-align: center;
   margin-inline: auto;
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   padding: 0.9rem;
   cursor: pointer;
   transition: all 0.7s;
@@ -986,7 +984,7 @@ contact       SP
 }
 @media (max-width: 767px) {
   #contact {
-    padding: 5.5rem 0 5rem;
+    padding: 5.2rem 0 5rem;
   }
   .contact__inner {
     margin-top: 2.75rem;
@@ -994,8 +992,9 @@ contact       SP
   }
   .contact__intro {
     font-size: 1.6rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.9rem;
     text-align: left;
+    line-height: 1.87;
   }
   .form-group {
     font-size: 1.8rem;
@@ -1017,7 +1016,7 @@ contact       SP
     width: 100%;
     padding: 0.8rem;
     font-size: 2rem;
-    margin-top: 0.3rem;
+    margin-top: 0.4rem;
   }
   textarea {
     width: 100%;
@@ -1119,18 +1118,18 @@ footer          sp
    =========================== */
 @media (max-width: 767px) {
   #footer {
-    padding: 4.2rem 0 4.8rem;
+    padding: 4.25rem 0 4.8rem;
   } 
   #footer::after {
     background-position: right bottom;
     right: max(1.8rem, calc((100vw - 1080px) / 2 + 2.8rem));
   }
   .footer__nav {
-    margin-top: 0.4rem;
-    margin-bottom: 2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.9rem;
     padding: 0;
     padding-bottom: 0.6rem;
-    line-height: 1;
+    line-height: 1.83;
     font-size: 1.8rem;
     position: relative;
   }
