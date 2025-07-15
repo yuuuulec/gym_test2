@@ -1152,6 +1152,7 @@ menu        sp
       width: 100%;
       aspect-ratio: 335 / 222;
       height: auto;
+      max-width: none954;
     }
 
     .map iframe {
