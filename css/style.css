@@ -456,7 +456,7 @@ greeting
   font-style: italic;
   color: #e5a414;
   font-size: 3rem;
-  line-height: 1.7;
+  line-height: 1.66;
   margin-bottom: 1.5rem;
   text-align: center;
   padding-right: 1.2rem;
@@ -464,12 +464,15 @@ greeting
   white-space: normal;
 }
 
+.greeting__line {
+  display: inline;
+}
+
 .greeting__text {
   text-align: center;
   line-height: 1.8;
 }
 
-/* 改行はデフォルト非表示 */
 .br-375,
 .br-350,
 .br-all,
@@ -477,21 +480,18 @@ greeting
   display: none;
 }
 
-/* 375px以下：「たった15分で、」の後で改行 */
 @media (max-width: 767px) {
   .br-375 {
     display: inline;
   }
 }
 
-/* 350px以下：「体幹を変える、」の後でも改行（3行に） */
 @media (max-width: 350px) {
   .br-350 {
     display: inline;
   }
 }
 
-/* PC（1024px以上）とスマホ（〜375px）：3か所改行 */
 @media (min-width: 1024px),
 (max-width: 375px) {
   .br-all {
@@ -499,7 +499,6 @@ greeting
   }
 }
 
-/* タブレット専用：お客様〜の前にも改行＝4行表示 */
 @media (max-width: 1025px) {
   .br-tab-extra {
     display: inline;
@@ -510,7 +509,6 @@ greeting
   }
 }
 
-/* ========== スマホ・タブレット用スタイル調整 ========== */
 @media (max-width: 1011px) {
   .greeting {
     padding: 4.3rem 0 5rem;
@@ -576,7 +574,7 @@ reason
   #reason {
     background-color: #fcf6e7;
     position: relative;
-    padding: 6.2rem 0 5.2rem;
+    padding: 6.5rem 0 6.3rem;
   }
 
   .triangle {
@@ -607,7 +605,7 @@ reason
     grid-template-columns: 50% 50%;
     align-items: center;
     grid-template-areas: "text image";
-    margin-bottom: 4.3rem;
+    margin-bottom: 5rem;
     text-align: left;
     width: 100%;
   }
@@ -670,7 +668,7 @@ reason
 
   @media (max-width: 767px) {
     #reason {
-      padding: 5.4rem 0 4rem;
+      padding: 5.4rem 0 5.4rem;
       width: 100%;
     }
 
@@ -695,7 +693,6 @@ reason
 
     .reason__ttl {
       font-size: 2rem;
-      /* margin-top: rem; */
       text-align: center;
     }
 
@@ -706,7 +703,7 @@ reason
     .reason__item {
       display: flex;
       flex-direction: column;
-      margin-bottom: 3.4rem;
+      margin: 2.1rem 0 4.4rem;
       margin-top: 0;
     }
 
@@ -714,23 +711,29 @@ reason
       width: 100%;
       padding-right: 0;
       order: 2;
-      margin-top: 1.2rem;
+      text-align: center;
+      margin-top: 1.9rem;
+
     }
 
     .reason__desc {
       text-align: left;
-      margin-bottom: 1rem;
       margin-top: 1rem;
       font-size: 1.6rem;
     }
 
-    .reason__item:nth-of-type(3) .reason__content {
-      margin-top: 1.5rem;
+    .reason__item:nth-of-type(3) {
+      margin-top: 4.2rem;
     }
+
+    .reason__item:nth-of-type(3) .reason__content {
+      margin-top: 2rem;
+    } 
+
 
     .reason__item:nth-child(even) {
       flex-direction: column;
-      margin-bottom: 3.2rem;
+      margin-bottom: 3rem;
     }
 
     .reason__item:nth-child(even) .reason__content {
@@ -757,7 +760,7 @@ reason
 menu 
    =========================== */
   .menu {
-    padding: 6.8rem 0 5.9rem;
+    padding: 6.8rem 0 6.5rem;
   }
 
   .menu .section__ttl {
@@ -776,7 +779,7 @@ menu
   .menu__ttl {
     font-size: 2rem;
     text-align: center;
-    margin: 0.9rem 0 0.6rem;
+    margin: 1.6rem 0 0.6rem;
   }
 
   .menu__desc {
@@ -815,14 +818,14 @@ menu        sp
       margin-bottom: 0;
     }
 
-
     .menu__ttl {
       text-align: center;
-      margin: 1.2rem 1rem;
+      margin-top: 1.7rem;
     }
 
     .menu__desc {
       font-size: 1.6rem;
+      margin-top: 1.3rem;
     }
 
     .menu__item:nth-of-type(3) .menu__desc {
@@ -840,7 +843,7 @@ menu        sp
   .news__section {
     position: relative;
     background-color: #fcf6e7;
-    padding: 6rem 0;
+    padding: 5.8rem 0;
   }
 
   .news__list {
@@ -861,7 +864,7 @@ menu        sp
     display: grid;
     grid-template-columns: 11.7rem 20.9rem 1fr;
     align-items: center;
-    padding: 1.6rem 0px 1.4rem 1.9rem;
+    padding: 1.5rem 0px 1.4rem 1.9rem;
     text-decoration: none;
     padding-left: 1.9rem;
     transition: opacity 0.7s ease;
@@ -952,7 +955,7 @@ menu        sp
    info
    =========================== */
   #info {
-    padding: 6.8rem 0 6rem;
+    padding: 7.1rem 0 6rem;
   }
 
   #info .section__ttl {
@@ -970,7 +973,6 @@ menu        sp
   }
 
   .map {
-    aspect-ratio: 440 / 300;
     max-width: 44rem;
     width: 100%;
   }
@@ -983,7 +985,7 @@ menu        sp
 
   .address {
     border-bottom: 1px solid #000;
-    padding-bottom: 2.7rem;
+    padding-bottom: 2.75rem;
   }
 
   .company-name {
@@ -1004,6 +1006,10 @@ menu        sp
     white-space: normal;
   }
 
+  .company-tel {
+  margin-bottom: 0.8rem;
+  }
+
   .company-tel a {
     color: #e5a414;
     font-size: 2.5rem;
@@ -1021,14 +1027,13 @@ menu        sp
   }
 
   .phone-desktop {
-    display: inline;
+    display: inline-block;
     pointer-events: none;
     cursor: default;
   }
 
   .company-email {
     font-size: 1.8rem;
-    margin-top: 1rem;
     transition: transform 0.7s ease, color 0.7s ease;
   }
 
@@ -1047,8 +1052,8 @@ menu        sp
   }
 
   .business__hours {
-    padding: 1.5rem 0 1.4rem;
-    margin-left: 0.4rem;
+    padding: 2.2rem 0 1.8rem;
+    /* margin-left: 0.4rem; */
     border-bottom: 1px solid #000;
   }
 
@@ -1093,22 +1098,25 @@ menu        sp
       padding-left: 0;
     }
 
+    .address {
+      padding-bottom: 1.5rem;
+    }
+
     .company-name {
       font-size: 2.2rem;
       line-height: 1.3;
     }
+    .company-address {
+      margin-bottom: 2.2rem;
+    }
 
     .company-address .sp-only {
-      display: inline;
+      display: inline-block;
     }
 
     .news__item {
       font-size: 1.8rem;
     }
-/* 
-    .company-address {
-      margin-bottom: 2rem;
-    } */
 
     .company-tel span {
       font-size: 2.5rem;
@@ -1117,7 +1125,7 @@ menu        sp
 
     .company-tel {
       font-size: 1.6rem;
-      margin-bottom: 0.9rem;
+      margin-bottom: 0.8rem;
     }
 
     .company-tel a:hover {
@@ -1140,10 +1148,11 @@ menu        sp
 
     .hours {
       margin: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
     }
 
     .business__hours {
+      padding: 1.6rem 0 1.3rem;
       margin-left: 0;
       font-size: 1.6rem;
     }
@@ -1151,8 +1160,8 @@ menu        sp
     .map {
       width: 100%;
       aspect-ratio: 335 / 222;
-      height: auto;
-      max-width: none954;
+      height: 100%;
+      max-width: none;
     }
 
     .map iframe {
@@ -1172,13 +1181,13 @@ contact
   }
 
   #contact .section__ttl {
-    margin-bottom: 1.9rem;
+    margin-bottom: 1.8rem;
   }
 
   .contact__intro {
     text-align: center;
     font-size: 1.7rem;
-    margin-bottom: 3.6rem;
+    margin-bottom: 4.4rem;
     line-height: 1.76;
   }
 
@@ -1186,7 +1195,7 @@ contact
     font-size: 2rem;
     display: grid;
     grid-template-columns: 17rem 1fr;
-    margin-bottom: 3rem;
+    margin-bottom: 2.8rem;
   }
 
   input[type="text"],
@@ -1201,6 +1210,12 @@ contact
 
   label {
     width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  label[for="message"] {
+    align-items: flex-start;
+    padding-top: 0.7rem;
   }
 
   .submit-btn {
@@ -1214,7 +1229,7 @@ contact
     border-radius: 10px;
     text-align: center;
     margin-inline: auto;
-    margin-top: 2.2rem;
+    margin-top: 4.9rem;
     padding: 0.9rem;
     cursor: pointer;
     transition: all 0.7s;
@@ -1249,17 +1264,17 @@ contact       SP
 
   @media (max-width: 767px) {
     #contact {
-      padding: 5.4rem 0 5rem;
+      padding: 5.6rem 0 4.8rem;
     }
 
     .contact__inner {
-      margin-top: 2.75rem;
+      margin-top: 2.8rem;
       line-height: 1.8;
     }
 
     .contact__intro {
       font-size: 1.6rem;
-      margin-bottom: 1.9rem;
+      margin-bottom: 3rem;
       text-align: left;
       line-height: 1.87;
     }
@@ -1269,18 +1284,23 @@ contact       SP
       display: flex;
       flex-direction: column;
       margin-right: 0;
-      margin-bottom: 2rem;
+      margin-bottom: 1.9rem;
     }
 
     input[type="text"],
     input[type="email"],
     textarea {
       height: 5rem;
+      margin-bottom: 0;
     }
 
     label {
-      width: 100%;
-      margin-bottom: 1.2rem;
+      margin-bottom: 0.2rem;
+      padding: 0;
+    }
+    label[for="message"] {
+      align-items: center;
+      margin: 0;
       padding: 0;
     }
 
@@ -1288,18 +1308,11 @@ contact       SP
       width: 100%;
       padding: 0.8rem;
       font-size: 2rem;
-      margin-top: 4.4rem;
+      margin-top: 4.3rem;
     }
 
     textarea {
-      width: 100%;
       height: 30rem;
-    }
-
-    input[type="text"],
-    input[type="email"] {
-      height: 5rem;
-      margin-bottom: 1.2rem;
     }
   }
 
@@ -1324,16 +1337,13 @@ footer
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 21.5rem;
-    height: 27rem;
+    width: 22rem;
+    height: 27.5rem;
     aspect-ratio: 160 / 418;
     pointer-events: none;
   }
 
   .footer__nav {
-    padding-bottom: 1.3rem;
-    /* padding: 0 0.1rem 1.1rem; */
-    margin-bottom: 1rem;
     max-width: 74rem;
     width: 100%;
     margin-inline: auto;
@@ -1343,7 +1353,6 @@ footer
     border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
-    /* gap: 0.6rem; */
     /* padding: 0 2.5rem; */
     font-size: 2rem;
     flex-wrap: wrap;
@@ -1353,7 +1362,7 @@ footer
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0.7rem;
+    padding: 2.1rem 0.7rem;
   }
 
   .footer__nav-item a {
@@ -1366,7 +1375,7 @@ footer
 
   .copyright {
     font-size: 2rem;
-    margin: 1.6rem 0 0.8rem;
+    margin: 2.8rem 0 0.8rem;
     line-height: 1.6;
   }
 
@@ -1413,7 +1422,7 @@ footer          sp
       background-size: cover;
       background-position: center center;
       width: 22rem;
-      height: 26rem;
+      height: 27rem;
     }
 
     .footer__nav {
@@ -1445,10 +1454,11 @@ footer          sp
 
     .copyright {
       font-size: 1.6rem;
+      margin: 1rem 0;
     }
 
     .footer__nav-item a {
-      padding: 0.2rem 0 0.2rem;
+      padding: 0.2rem 0 0.3rem;
     }
 
     .sns-icons {
