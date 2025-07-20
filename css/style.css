@@ -623,11 +623,11 @@ reason
   .reason__content {
     grid-area: text;
     font-size: 1.8rem;
-    padding-right: 4.5rem;
+    margin-right: 4.5rem;
   }
 
   .reason__item:nth-child(even) .reason__content {
-    padding-left: 4.4rem;
+    margin-left: 4.4rem;
     padding-right: 0;
   }
 
@@ -969,7 +969,7 @@ menu        sp
 
   .info__inner {
     max-width: 100%;
-    padding-left: 4.6rem;
+    margin-left: 4.6rem;
   }
 
   .map {
@@ -1053,7 +1053,7 @@ menu        sp
 
   .business__hours {
     padding: 2.2rem 0 1.8rem;
-    /* margin-left: 0.4rem; */
+    /* margin-left: 0.4rem;ピクパ時左に余白あり */
     border-bottom: 1px solid #000;
   }
 
@@ -1197,6 +1197,12 @@ contact
     grid-template-columns: 17rem 1fr;
     margin-bottom: 2.8rem;
   }
+
+  .form-group:last-of-type {
+    margin-bottom: 0;
+  }
+
+
 
   input[type="text"],
   input[type="email"],
