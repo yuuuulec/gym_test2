@@ -606,7 +606,7 @@ reason
     grid-template-columns: 50% 50%;
     align-items: center;
     grid-template-areas: "text image";
-    margin-bottom: 5rem;
+    margin-bottom: 5.2rem;
     text-align: left;
     width: 100%;
   }
@@ -630,6 +630,7 @@ reason
   .reason__item:nth-child(even) .reason__content {
     margin-left: 4.4rem;
     padding-right: 0;
+    margin-right: 0;
   }
 
   .reason__img {
@@ -645,7 +646,7 @@ reason
 } */
   .reason__desc {
     line-height: 1.83;
-    margin-top: 1.6rem;
+    margin-top: 1.9rem;
     text-align: left;
   }
 
@@ -724,18 +725,19 @@ reason
     }    
 
     .reason__item:nth-of-type(3) .reason__content {
-      margin-top: 1.7rem;
+      margin-top: 1.9rem;
     } 
 
 
     .reason__item:nth-child(even) {
       flex-direction: column;
-      margin-bottom: 4.4rem;
+      margin-bottom: 4.2rem;
     }
 
     .reason__item:nth-child(even) .reason__content {
       padding-left: 0;
       margin-left: 0;
+      margin-top: 2rem;
     }
 
     .reason__item--inner {
@@ -758,7 +760,7 @@ reason
 menu 
    =========================== */
   .menu {
-    padding: 6.8rem 0 6.5rem;
+    padding: 6.8rem 0 6rem;
   }
 
   .menu .section__ttl {
@@ -842,7 +844,7 @@ menu        sp
   .news__section {
     position: relative;
     background-color: #fcf6e7;
-    padding: 5.8rem 0;
+    padding: 6rem 0;
   }
 
   .news__list {
@@ -863,7 +865,7 @@ menu        sp
     display: grid;
     grid-template-columns: 11.7rem 20.9rem 1fr;
     align-items: center;
-    padding: 1.5rem 0px 1.4rem 1.9rem;
+    padding: 1.6rem 0px 1.4rem 1.9rem;
     text-decoration: none;
     padding-left: 1.9rem;
     transition: opacity 0.7s ease;
@@ -954,7 +956,7 @@ menu        sp
    info
    =========================== */
   #info {
-    padding: 7.1rem 0 6rem;
+    padding: 6.7rem 0 6rem;
   }
 
   #info .section__ttl {
@@ -1057,7 +1059,7 @@ menu        sp
   }
 
   .hours {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
     word-break: keep-all;
     line-break: strict;
   }
