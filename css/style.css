@@ -62,7 +62,7 @@ li {
 
 @media (max-width: 767px) {
   .inner {
-    max-width: 77rem;
+    max-width: 100%;
   }
 
   .section__ttl {
@@ -594,9 +594,10 @@ reason
     font-size: 2.2rem;
     display: inline;
     background: linear-gradient(to bottom, transparent 80%, #e5a414 30%);
+    white-space: nowrap;
   }
 
-  .reason__ttl .sp350-only {
+  .sp350-only {
     display: none;
   }
 
@@ -649,7 +650,7 @@ reason
   }
 
   @media (max-width: 864px) {
-    .reason__ttl .sp350-only {
+   .sp350-only {
       display: block;
     }
   }
@@ -703,7 +704,7 @@ reason
     .reason__item {
       display: flex;
       flex-direction: column;
-      margin: 2.1rem 0 4.4rem;
+      margin-bottom: 4rem;
       margin-top: 0;
     }
 
@@ -713,31 +714,28 @@ reason
       order: 2;
       text-align: center;
       margin-top: 1.9rem;
-
+      margin-right: 0;
     }
 
     .reason__desc {
       text-align: left;
-      margin-top: 1rem;
+      margin-top: 1.2rem;
       font-size: 1.6rem;
-    }
-
-    .reason__item:nth-of-type(3) {
-      margin-top: 4.2rem;
-    }
+    }    
 
     .reason__item:nth-of-type(3) .reason__content {
-      margin-top: 2rem;
+      margin-top: 1.7rem;
     } 
 
 
     .reason__item:nth-child(even) {
       flex-direction: column;
-      margin-bottom: 3rem;
+      margin-bottom: 4.4rem;
     }
 
     .reason__item:nth-child(even) .reason__content {
       padding-left: 0;
+      margin-left: 0;
     }
 
     .reason__item--inner {
@@ -792,13 +790,13 @@ menu        sp
    =========================== */
   @media (max-width: 1011px) {
     .menu {
-      padding: 5rem 0 6rem;
+      padding: 5.2rem 0 6rem;
     }
   }
 
   @media (max-width: 767px) {
     .menu {
-      padding: 5.7rem 0 5.5rem;
+      padding: 5.3rem 0 5.2rem;
     }
 
     .menu .section__ttl {
@@ -820,7 +818,8 @@ menu        sp
 
     .menu__ttl {
       text-align: center;
-      margin-top: 1.7rem;
+      margin-top: 1.9rem;
+      margin-bottom: 0;
     }
 
     .menu__desc {
@@ -908,7 +907,7 @@ menu        sp
 
   @media (max-width: 767px) {
     .news__section {
-      padding: 5.7rem 0 4.7rem;
+      padding: 5.7rem 0 5rem;
     }
 
     .news__section .section__ttl {
@@ -926,7 +925,7 @@ menu        sp
       grid-template-rows: 2.5rem 2.5rem auto;
       width: 100%;
       box-sizing: border-box;
-      padding: 3rem 0 2.6rem 1rem;
+      padding: 3.1rem 0 2.5rem 1rem;
 
     }
 
@@ -1053,7 +1052,7 @@ menu        sp
 
   .business__hours {
     padding: 2.2rem 0 1.8rem;
-    /* margin-left: 0.4rem;ピクパ時左に余白あり */
+    margin-left: 0.4rem;
     border-bottom: 1px solid #000;
   }
 
@@ -1084,7 +1083,7 @@ menu        sp
 
   @media (max-width: 767px) {
     #info {
-      padding: 6.2rem 0 5rem;
+      padding: 6rem 0 5rem;
       margin: 0;
     }
 
@@ -1095,6 +1094,7 @@ menu        sp
     .info__inner {
       width: 100%;
       margin-top: 3.4rem;
+      margin-left: 0;
       padding-left: 0;
     }
 
@@ -1107,7 +1107,7 @@ menu        sp
       line-height: 1.3;
     }
     .company-address {
-      margin-bottom: 2.2rem;
+      margin-bottom: 2rem;
     }
 
     .company-address .sp-only {
@@ -1314,7 +1314,7 @@ contact       SP
       width: 100%;
       padding: 0.8rem;
       font-size: 2rem;
-      margin-top: 4.3rem;
+      margin-top: 4.5rem;
     }
 
     textarea {
