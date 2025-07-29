@@ -23,10 +23,9 @@ body {
 }
 
 img {
-  max-width: 100%;
   width: 100%;
   height: auto;
-  box-sizing: border-box;
+  display: block;
 }
 
 section {
@@ -35,7 +34,7 @@ section {
 
 @media (max-width: 767px) {
   #greeting {
-    scroll-margin-top: -5rem;
+    scroll-margin-top: 5rem;
   }
 }
 
@@ -60,6 +59,13 @@ li {
   margin-bottom: 4.7rem;
 }
 
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
 @media (max-width: 767px) {
   .inner {
     max-width: 100%;
@@ -68,19 +74,14 @@ li {
   .section__ttl {
     margin-bottom: 4rem;
   }
-}
 
-.content-picture {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+  .pc-only {
+    display: none;
+  }
 
-.content-picture img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  .sp-only {
+    display: block;
+  }
 }
 
 /* ===========================
@@ -168,16 +169,16 @@ header
 }
 
 /* ---------------------------
-main
+fv
 --------------------------------*/
-#main {
+#fv {
   display: flex;
   padding-top: 5rem;
   width: 100vw;
   height: calc(550 / 1080 * 100vw);
 }
 
-.main-content__box {
+.fv-content__box {
   width: 43%;
   height: 100%;
   background-color: #e5a414;
@@ -188,13 +189,13 @@ main
   text-align: center;
   position: relative;
   flex-shrink: 0;
-  background-image: url(../img/logo_pc.svg);
+  background-image: url(../img/logo.svg);
   background-repeat: no-repeat;
-  background-position: right bottom 2.5rem;
-  background-size: 17.5vw;
+  background-position: right bottom;
+  background-size: 19vw;
 }
 
-.main-content__box::after {
+.fv-content__box::after {
   position: absolute;
   content: "";
   border: 0.2rem solid #000;
@@ -204,11 +205,11 @@ main
   bottom: 2rem;
 }
 
-.main-content__box .sp-only {
+.fv-content__box .sp-only {
   display: none;
 }
 
-.main-text {
+.fv-text {
   font-size: 2.78vw;
   line-height: 1.4;
 }
@@ -263,12 +264,12 @@ main
   padding-left: 1rem;
 }
 
-.main__img {
+.fv__img {
   width: 57%;
   height: 100%;
 }
 
-.main__img img {
+.fv__img img {
   object-fit: cover;
   object-position: right bottom;
   width: 100%;
@@ -277,8 +278,17 @@ main
 }
 
 /* ===========================
- header main　　　　　SP
+ header fv　　　　　SP
    ========================*/
+   @media (max-width: 1055px) {
+    
+   .top-text {
+margin-top: 5rem;
+   }
+.bottom-text {
+  margin: 2rem 0 2rem 2rem;
+}
+   }
 @media (max-width: 980px) {
   .header__inner {
     padding: 0 2.2rem;
@@ -302,50 +312,44 @@ main
     display: none;
   }
 
-  #main {
+  #fv {
     height: auto;
-    position: relative;
     flex-direction: column-reverse;
   }
 
-  #main .pc-only {
+  #fv .pc-only {
     display: none;
   }
 
-  .main-content__box {
+  .fv-content__box {
     font-size: 2rem;
     width: 100%;
-    height: 19rem;
-    position: absolute;
-    bottom: -9rem;
-    left: 0;
-    z-index: 10;
+    height: 18.5rem;
     background-image: url(../img/header-logo_sp.svg);
-    /* background-size: 37vw auto; */
     background-size: clamp(100px, 37vw, 140px);
     background-position: 100% 0;
   }
 
-  .main-content__box::after {
+  .fv-content__box::after {
     border: 0.1rem solid #000;
-    top: 1.4rem;
+    top: 1rem;
     right: 1.2rem;
     left: 1.2rem;
     bottom: 1.5rem;
   }
 
-  .main-content__box .sp-only {
+  .fv-content__box .sp-only {
     display: inline;
   }
 
-  .main-text {
+  .fv-text {
     font-size: 2rem;
   }
 
   .top-text {
     position: relative;
-    top: -4rem;
     line-height: 1;
+    margin-top: 1.5rem;
   }
 
   .sp-space {
@@ -355,20 +359,18 @@ main
 
   .middle-text {
     position: relative;
-    top: -4rem;
     font-size: 2rem;
     line-height: 1;
     margin: 0;
-    margin-top: 0.8rem;
+    margin-top: 1rem;
   }
 
   .bottom-text {
     position: relative;
     left: 0;
-    top: -2.6rem;
     line-height: 1;
     margin: 0;
-    margin-top: 0.5rem;
+    margin-top: 1.7rem;
     padding-bottom: 2rem;
   }
 
@@ -380,7 +382,7 @@ main
     margin: 0;
   }
 
-  .main__logo {
+  .fv__logo {
     width: calc(100 / 600 * 100vw);
     bottom: -0.5rem;
   }
@@ -392,14 +394,14 @@ main
     font-size: 0.7rem;
   }
 
-  .main__img {
+  .fv__img {
     width: 100%;
     height: auto;
     line-height: 0;
     position: relative;
   }
 
-  .main__img img {
+  .fv__img img {
     width: 100%;
     height: auto;
     display: block;
@@ -414,26 +416,29 @@ main
     font-size: 0.6rem;
   }
 
-  .main-content__box {
+  .fv-content__box {
     background-image: url(../img/logo_pc.svg);
     background-position: right center;
   }
 
-  .main-text .sp-only {
+  .fv-text .sp-only {
     display: none;
   }
 
-  #main .pc-only {
+  #fv .pc-only {
     display: block;
   }
 
   .top-text {
-    top: -3.5rem;
+    margin-top: 0;
   }
-
+  .middle-text {
+    margin-top: 0.6rem;
+  }
   .bottom-text {
     left: 0;
-    top: -3.4rem;
+    padding-bottom: 0;
+    margin-top: 0.8rem;
   }
 
   .back-black {
@@ -464,49 +469,18 @@ greeting
   white-space: normal;
 }
 
-.greeting__line {
-  display: inline;
-}
-
 .greeting__text {
   text-align: center;
   line-height: 1.8;
 }
 
+.inline-block {
+  display:inline-block
+}
+
 .br-375,
-.br-350,
-.br-all,
-.br-tab-extra {
+.br-350 {
   display: none;
-}
-
-@media (max-width: 767px) {
-  .br-375 {
-    display: inline;
-  }
-}
-
-@media (max-width: 350px) {
-  .br-350 {
-    display: inline;
-  }
-}
-
-@media (min-width: 1024px),
-(max-width: 375px) {
-  .br-all {
-    display: inline;
-  }
-}
-
-@media (max-width: 1025px) {
-  .br-tab-extra {
-    display: inline;
-  }
-
-  .br-all {
-    display: inline;
-  }
 }
 
 @media (max-width: 1011px) {
@@ -516,27 +490,25 @@ greeting
 }
 
 @media (max-width: 767px) {
-  .br-tab-extra {
-    display: none;
+  .br-375 {
+    display: inline;
   }
 
   .greeting {
-    padding: 3.7rem 0 5.1rem;
+    padding: 5rem 0 4.7rem;
     margin: 0;
   }
 
   .greeting__top {
     font-size: 2.3rem;
     line-height: 1.52;
-    margin-top: 5rem;
     margin-bottom: 1.9rem;
-    padding-top: 5rem;
     padding-right: 0;
   }
 
   .greeting__text {
     font-size: 1.6rem;
-    line-height: 1.9;
+    line-height: 1.87;
     text-align: left;
   }
 
@@ -547,26 +519,17 @@ greeting
   .section__ttl {
     margin-bottom: 4rem;
   }
+
+.inline-block {
+  display: inline;
+}
 }
 
-@media (max-width: 761px) {
-  .br-tab-extra {
-    display: inline;
-  }
-}
-
-  @media (max-width: 678px) {
-    .br-none {
-      display: none;
+  @media (max-width: 350px) {
+    .br-350 {
+      display: inline;
     }
   }
-
-  @media (max-width: 530px) {
-    .br-tab-extra {
-      display: none;
-    }
-  }
-
 
   /* ===========================
 reason
@@ -658,19 +621,13 @@ reason
 
   @media (max-width: 940px) {
     .reason__content {
-      margin-top: 0.5rem;
       text-align: left;
     }
-
-    .reason__item:nth-of-type(3) .reason__content {
-      margin-top: 1rem;
-    }
-
   }
 
   @media (max-width: 767px) {
     #reason {
-      padding: 5.4rem 0 5.4rem;
+      padding: 5.8rem 0 5.4rem;
       width: 100%;
     }
 
@@ -769,7 +726,8 @@ menu
 
   .menu__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 5.75%;
   }
 
   .menu__item {
@@ -807,6 +765,7 @@ menu        sp
 
     .menu__list {
       flex-direction: column;
+      gap: 0;
     }
 
     .menu__item {
@@ -1253,6 +1212,7 @@ contact
   textarea {
     width: 100%;
     height: 30rem;
+    min-height: 30rem;
     resize: vertical;
   }
 
@@ -1313,6 +1273,7 @@ contact       SP
     }
 
     .submit-btn {
+      max-width: 33.5rem;
       width: 100%;
       padding: 0.7rem;
       font-size: 2rem;
@@ -1421,7 +1382,7 @@ footer          sp
    =========================== */
   @media (max-width: 767px) {
     #footer {
-      padding: 3.7rem 0 4.8rem;
+      padding: 5.1rem 0 5rem;
     }
 
     #footer::after {
@@ -1434,10 +1395,7 @@ footer          sp
     }
 
     .footer__nav {
-      margin-top: 0.3rem;
-      margin-bottom: 1.9rem;
-      padding: 0;
-      padding-bottom: 0.6rem;
+      /* padding-bottom: 0.6rem; */
       line-height: 1.83;
       font-size: 1.8rem;
       position: relative;
@@ -1449,20 +1407,17 @@ footer          sp
       flex-wrap: wrap;
       column-gap: 1.4rem;
       justify-content: center;
-      padding-bottom: 1.8rem;
       position: relative;
+      padding-bottom: 1.8rem;
       border: none;
-      padding-left: 0;
-      padding-right: 0;
       font-size: 1.8rem;
       line-height: 1.6;
-      margin-top: 1.2rem;
-      border-bottom: 0.8px solid black;
+      border-bottom: 0.8px solid #000;
     }
 
     .copyright {
       font-size: 1.6rem;
-      margin: 1rem 0;
+      margin: 2.5rem 0 2rem;
     }
 
     .footer__nav-item a {
