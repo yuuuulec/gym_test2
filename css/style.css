@@ -483,10 +483,6 @@ greeting
   display: none;
 }
 
-.nowrap {
-  white-space: normal;
-}
-
 @media (max-width: 1011px) {
   .greeting {
     padding: 4.3rem 0 5rem;
@@ -533,7 +529,7 @@ greeting
   }
 
 .sp-only {
-  display: inline-block;
+  display: inline;
 } 
 }
 
