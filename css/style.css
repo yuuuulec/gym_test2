@@ -527,10 +527,10 @@ greeting
 .pc-only {
     display: inline-block;
   }
-
+/* 
 .sp-only {
   display: inline;
-} 
+}  */
 }
 
   @media (max-width: 350px) {
