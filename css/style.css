@@ -23,21 +23,20 @@ body {
 }
 
 img {
-  max-width: 100%;
   width: 100%;
   height: auto;
-  box-sizing: border-box;
+  display: block;
 }
 
 section {
   scroll-margin-top: 5rem;
 }
 
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
   #greeting {
     scroll-margin-top: 5rem;
   }
-}スクロールするのに必要 */
+}
 
 li {
   list-style: none;
@@ -60,6 +59,13 @@ li {
   margin-bottom: 4.7rem;
 }
 
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
 @media (max-width: 767px) {
   .inner {
     max-width: 100%;
@@ -68,19 +74,14 @@ li {
   .section__ttl {
     margin-bottom: 4rem;
   }
-}
 
-.content-picture {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+  .pc-only {
+    display: none;
+  }
 
-.content-picture img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  .sp-only {
+    display: block;
+  }
 }
 
 /* ===========================
@@ -188,10 +189,10 @@ fv
   text-align: center;
   position: relative;
   flex-shrink: 0;
-  background-image: url(../img/logo_pc.svg);
+  background-image: url(../img/logo.svg);
   background-repeat: no-repeat;
-  background-position: right bottom 2.5rem;
-  background-size: 17.5vw;
+  background-position: right bottom;
+  background-size: 19vw;
 }
 
 .fv-content__box::after {
@@ -280,6 +281,7 @@ fv
  header fv　　　　　SP
    ========================*/
    @media (max-width: 1055px) {
+    
    .top-text {
 margin-top: 5rem;
    }
@@ -312,7 +314,6 @@ margin-top: 5rem;
 
   #fv {
     height: auto;
-    position: relative;
     flex-direction: column-reverse;
   }
 
@@ -323,20 +324,15 @@ margin-top: 5rem;
   .fv-content__box {
     font-size: 2rem;
     width: 100%;
-    height: 19rem;
-    position: absolute;
-    bottom: -9rem;
-    left: 0;
-    z-index: 10;
+    height: 18.5rem;
     background-image: url(../img/header-logo_sp.svg);
-    /* background-size: 37vw auto; */
     background-size: clamp(100px, 37vw, 140px);
     background-position: 100% 0;
   }
 
   .fv-content__box::after {
     border: 0.1rem solid #000;
-    top: 1.4rem;
+    top: 1rem;
     right: 1.2rem;
     left: 1.2rem;
     bottom: 1.5rem;
@@ -372,7 +368,6 @@ margin-top: 5rem;
   .bottom-text {
     position: relative;
     left: 0;
-    /* top: -2.6rem; */
     line-height: 1;
     margin: 0;
     margin-top: 1.7rem;
@@ -435,12 +430,15 @@ margin-top: 5rem;
   }
 
   .top-text {
-    top: -3.5rem;
+    margin-top: 0;
   }
-
+  .middle-text {
+    margin-top: 0.6rem;
+  }
   .bottom-text {
     left: 0;
-    top: -3.4rem;
+    padding-bottom: 0;
+    margin-top: 0.8rem;
   }
 
   .back-black {
@@ -471,34 +469,24 @@ greeting
   white-space: normal;
 }
 
-.greeting__line {
-  display: inline;
-}
-
 .greeting__text {
   text-align: center;
   line-height: 1.8;
 }
 
+.inline-block {
+  display:inline-block
+}
+
 .br-375,
-.br-350,
-.br-all,
-.br-tab-extra {
+.br-350 {
   display: none;
 }
 
 .nowrap {
-  white-space: nowrap;
+  white-space: normal;
 }
-@media (max-width: 1025px) {
-  .br-tab-extra {
-    display: inline;
-  }
 
-  .br-all {
-    display: inline;
-  }
-}
 @media (max-width: 1011px) {
   .greeting {
     padding: 4.3rem 0 5rem;
@@ -510,31 +498,21 @@ greeting
     display: inline;
   }
 
-  .br-tab-extra {
-    display: none;
-  }
-
-  .nowrap {
-    white-space: normal;
-  }
-
   .greeting {
-    padding: 3.7rem 0 5.1rem;
+    padding: 5rem 0 4.7rem;
     margin: 0;
   }
 
   .greeting__top {
     font-size: 2.3rem;
     line-height: 1.52;
-    margin-top: 5rem;
     margin-bottom: 1.9rem;
-    padding-top: 5rem;
     padding-right: 0;
   }
 
   .greeting__text {
     font-size: 1.6rem;
-    line-height: 1.9;
+    line-height: 1.87;
     text-align: left;
   }
 
@@ -545,19 +523,19 @@ greeting
   .section__ttl {
     margin-bottom: 4rem;
   }
+
+.inline-block {
+  display: inline;
 }
 
-@media (max-width: 761px) {
-  .br-tab-extra {
-    display: none;
+.pc-only {
+    display: inline-block;
   }
-}
 
-  @media (max-width: 530px) {
-    .br-tab-extra {
-      display: none;
-    }
-  }
+.sp-only {
+  display: inline-block;
+} 
+}
 
   @media (max-width: 350px) {
     .br-350 {
@@ -661,7 +639,7 @@ reason
 
   @media (max-width: 767px) {
     #reason {
-      padding: 5.4rem 0 5.4rem;
+      padding: 5.8rem 0 5.4rem;
       width: 100%;
     }
 
@@ -1416,7 +1394,7 @@ footer          sp
    =========================== */
   @media (max-width: 767px) {
     #footer {
-      padding: 3.7rem 0 4.8rem;
+      padding: 5.1rem 0 5rem;
     }
 
     #footer::after {
@@ -1429,7 +1407,7 @@ footer          sp
     }
 
     .footer__nav {
-      padding-bottom: 0.6rem;
+      /* padding-bottom: 0.6rem; */
       line-height: 1.83;
       font-size: 1.8rem;
       position: relative;
@@ -1442,6 +1420,7 @@ footer          sp
       column-gap: 1.4rem;
       justify-content: center;
       position: relative;
+      padding-bottom: 1.8rem;
       border: none;
       font-size: 1.8rem;
       line-height: 1.6;
@@ -1450,7 +1429,7 @@ footer          sp
 
     .copyright {
       font-size: 1.6rem;
-      margin: 1rem 0;
+      margin: 2.5rem 0 2rem;
     }
 
     .footer__nav-item a {
