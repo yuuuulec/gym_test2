@@ -60,7 +60,7 @@ li {
 }
 
 .pc-only {
-  display: block;
+  display: inline-block;
 }
 
 .sp-only {
