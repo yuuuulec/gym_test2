@@ -1337,7 +1337,7 @@ footer
 
   .copyright {
     font-size: 2rem;
-    margin-top: 2.8rem 0 0.8rem;
+    margin-top: 2.8rem;
     line-height: 1.6;
   }
 
@@ -1348,6 +1348,7 @@ footer
     align-items: center;
     gap: 1.2rem;
     margin-inline: auto;
+    margin-top: 1rem;
     width: auto;
     height: auto;
   }
