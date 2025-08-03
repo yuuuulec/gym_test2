@@ -1209,6 +1209,9 @@ contact
     height: 30rem;
     min-height: 30rem;
     resize: vertical;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   input[type="text"],
