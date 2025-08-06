@@ -518,6 +518,11 @@ greeting
 .inline-block {
   display: inline;
 }
+
+.greeting__emphasis {
+  display: inline-block;
+  padding-left: 0rem;
+}
 }
 
   @media (max-width: 350px) {
