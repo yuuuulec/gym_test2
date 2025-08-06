@@ -498,7 +498,7 @@ greeting
     font-size: 2.3rem;
     line-height: 1.52;
     margin-bottom: 1.9rem;
-    padding-right: 0;
+    padding-right: 0rem;
   }
 
   .greeting__text {
@@ -521,7 +521,7 @@ greeting
 
 .greeting__emphasis {
   display: inline-block;
-  padding-left: 0rem;
+  padding-right: 1.1rem;
 }
 }
 
